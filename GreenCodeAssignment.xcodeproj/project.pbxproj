@@ -20,9 +20,11 @@
 		71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A3282A64BF00CDF39E /* InjectedValues.swift */; };
 		71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A5282A64FB00CDF39E /* Injected.swift */; };
 		71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66AB282A6BE100CDF39E /* SportResult.swift */; };
+		D6DBE9A7999C6C143B02290B /* Pods_GreenCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DD88400443C6CD9358B452D /* Pods-GreenCodeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.debug.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		71BF6678282A5D1E00CDF39E /* GreenCodeAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenCodeAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BF667B282A5D1E00CDF39E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71BF6684282A5D2100CDF39E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		71BF66A3282A64BF00CDF39E /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
 		71BF66A5282A64FB00CDF39E /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		71BF66AB282A6BE100CDF39E /* SportResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResult.swift; sourceTree = "<group>"; };
+		7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33C967E7136599978151798 /* Pods-GreenCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DBE9A7999C6C143B02290B /* Pods_GreenCodeAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 			children = (
 				71BF667A282A5D1E00CDF39E /* GreenCodeAssignment */,
 				71BF6679282A5D1E00CDF39E /* Products */,
+				B0A6619DFC52689EE1D1B212 /* Pods */,
+				E3D3B0800AD75C615337FA60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +135,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B0A6619DFC52689EE1D1B212 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DD88400443C6CD9358B452D /* Pods-GreenCodeAssignment.debug.xcconfig */,
+				F33C967E7136599978151798 /* Pods-GreenCodeAssignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3D3B0800AD75C615337FA60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +159,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71BF668C282A5D2100CDF39E /* Build configuration list for PBXNativeTarget "GreenCodeAssignment" */;
 			buildPhases = (
+				ECD1949439C75C2A9E375854 /* [CP] Check Pods Manifest.lock */,
+				71BF66AD282A6F0A00CDF39E /* Swiftlint */,
 				71BF6674282A5D1E00CDF39E /* Sources */,
 				71BF6675282A5D1E00CDF39E /* Frameworks */,
 				71BF6676282A5D1E00CDF39E /* Resources */,
@@ -192,6 +218,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71BF66AD282A6F0A00CDF39E /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		ECD1949439C75C2A9E375854 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreenCodeAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71BF6674282A5D1E00CDF39E /* Sources */ = {
@@ -342,6 +411,7 @@
 		};
 		71BF668D282A5D2100CDF39E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DD88400443C6CD9358B452D /* Pods-GreenCodeAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -370,6 +440,7 @@
 		};
 		71BF668E282A5D2100CDF39E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F33C967E7136599978151798 /* Pods-GreenCodeAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
