@@ -20,6 +20,9 @@
 		71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A3282A64BF00CDF39E /* InjectedValues.swift */; };
 		71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A5282A64FB00CDF39E /* Injected.swift */; };
 		71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66AB282A6BE100CDF39E /* SportResult.swift */; };
+		71BF66B0282A70F200CDF39E /* ResultFormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66AF282A70F200CDF39E /* ResultFormCoordinator.swift */; };
+		71BF66B2282A713800CDF39E /* ResultFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B1282A713800CDF39E /* ResultFormViewController.swift */; };
+		71BF66B4282A714200CDF39E /* ResultFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */; };
 		D6DBE9A7999C6C143B02290B /* Pods_GreenCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		71BF66A3282A64BF00CDF39E /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
 		71BF66A5282A64FB00CDF39E /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		71BF66AB282A6BE100CDF39E /* SportResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResult.swift; sourceTree = "<group>"; };
+		71BF66AF282A70F200CDF39E /* ResultFormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormCoordinator.swift; sourceTree = "<group>"; };
+		71BF66B1282A713800CDF39E /* ResultFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormViewController.swift; sourceTree = "<group>"; };
+		71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormViewModel.swift; sourceTree = "<group>"; };
 		7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33C967E7136599978151798 /* Pods-GreenCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +110,7 @@
 		71BF6694282A5E7800CDF39E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				71BF66AE282A70D100CDF39E /* ResultForm */,
 				71BF6697282A5EAD00CDF39E /* RecordsList */,
 			);
 			path = Scenes;
@@ -133,6 +140,16 @@
 				71BF66AB282A6BE100CDF39E /* SportResult.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		71BF66AE282A70D100CDF39E /* ResultForm */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66AF282A70F200CDF39E /* ResultFormCoordinator.swift */,
+				71BF66B1282A713800CDF39E /* ResultFormViewController.swift */,
+				71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */,
+			);
+			path = ResultForm;
 			sourceTree = "<group>";
 		};
 		B0A6619DFC52689EE1D1B212 /* Pods */ = {
@@ -268,11 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				71BF6693282A5E5600CDF39E /* Coordinator.swift in Sources */,
+				71BF66B4282A714200CDF39E /* ResultFormViewModel.swift in Sources */,
 				71BF6690282A5DC200CDF39E /* AppCoordinator.swift in Sources */,
 				71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */,
 				71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */,
 				71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */,
+				71BF66B0282A70F200CDF39E /* ResultFormCoordinator.swift in Sources */,
 				71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */,
+				71BF66B2282A713800CDF39E /* ResultFormViewController.swift in Sources */,
 				71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
 				71BF66A2282A642300CDF39E /* NetworkingProvider.swift in Sources */,
