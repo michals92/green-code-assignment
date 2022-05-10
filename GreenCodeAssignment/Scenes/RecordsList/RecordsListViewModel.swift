@@ -5,10 +5,10 @@
 //  Created by Michal Šimík on 10.05.2022.
 //
 
-import UIKit
+import Foundation
 
 protocol RecordsListViewControllerInput: AnyObject {
-
+    func reloadData(results: [SportResult])
 }
 
 protocol RecordsListCoordinatorInput: AnyObject {

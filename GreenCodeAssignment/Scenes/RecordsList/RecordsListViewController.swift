@@ -11,10 +11,15 @@ class RecordsListViewController: UIViewController {
     private let tableView = UITableView()
 
     var viewModel: RecordsListViewModelInput?
+    let dataSource = RecordListTableViewDataSource()
 
     override func loadView() {
         super.loadView()
         setLayout()
+        title = "Výsledky"
+
+        tableView.register(RecordsListTableViewCell.self, forCellReuseIdentifier: String(describing: RecordsListTableViewCell.self))
+        tableView.dataSource = dataSource
     }
 
     override func viewDidLoad() {
@@ -35,6 +40,11 @@ class RecordsListViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+    }
+
+    func reloadData(results: [SportResult]) {
+        dataSource.results = results
+        tableView.reloadData()
     }
 }
 

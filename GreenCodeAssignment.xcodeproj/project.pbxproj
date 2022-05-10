@@ -23,6 +23,8 @@
 		71BF66B0282A70F200CDF39E /* ResultFormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66AF282A70F200CDF39E /* ResultFormCoordinator.swift */; };
 		71BF66B2282A713800CDF39E /* ResultFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B1282A713800CDF39E /* ResultFormViewController.swift */; };
 		71BF66B4282A714200CDF39E /* ResultFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */; };
+		71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */; };
+		71BF66B9282A739400CDF39E /* RecordsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */; };
 		D6DBE9A7999C6C143B02290B /* Pods_GreenCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		71BF66AF282A70F200CDF39E /* ResultFormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormCoordinator.swift; sourceTree = "<group>"; };
 		71BF66B1282A713800CDF39E /* ResultFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormViewController.swift; sourceTree = "<group>"; };
 		71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormViewModel.swift; sourceTree = "<group>"; };
+		71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewDataSource.swift; sourceTree = "<group>"; };
+		71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewCell.swift; sourceTree = "<group>"; };
 		7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33C967E7136599978151798 /* Pods-GreenCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +126,8 @@
 				71BF6698282A5ED400CDF39E /* RecordsListCoordinator.swift */,
 				71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */,
 				71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */,
+				71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */,
+				71BF66B7282A738000CDF39E /* cells */,
 			);
 			path = RecordsList;
 			sourceTree = "<group>";
@@ -150,6 +156,14 @@
 				71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */,
 			);
 			path = ResultForm;
+			sourceTree = "<group>";
+		};
+		71BF66B7282A738000CDF39E /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		B0A6619DFC52689EE1D1B212 /* Pods */ = {
@@ -290,10 +304,12 @@
 				71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */,
 				71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */,
 				71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */,
+				71BF66B9282A739400CDF39E /* RecordsListTableViewCell.swift in Sources */,
 				71BF66B0282A70F200CDF39E /* ResultFormCoordinator.swift in Sources */,
 				71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */,
 				71BF66B2282A713800CDF39E /* ResultFormViewController.swift in Sources */,
 				71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */,
+				71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
 				71BF66A2282A642300CDF39E /* NetworkingProvider.swift in Sources */,
 				71BF6699282A5ED400CDF39E /* RecordsListCoordinator.swift in Sources */,
