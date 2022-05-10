@@ -12,11 +12,12 @@ protocol RecordsListViewControllerInput: AnyObject {
 }
 
 protocol RecordsListCoordinatorInput: AnyObject {
-
+    func showResultForm()
 }
 
 protocol RecordsListViewModelInput: AnyObject {
     func viewDidLoad()
+    func showResultForm()
 }
 
 final class RecordsListViewModel: RecordsListViewModelInput {
@@ -32,5 +33,15 @@ final class RecordsListViewModel: RecordsListViewModelInput {
 
     func viewDidLoad() {
         networkProvider.requestData()
+
+        let mockResults = [
+            SportResult(name: "test", place: "test place", duration: 21, type: .local),
+            SportResult(name: "test 1", place: "test place 2", duration: 21, type: .local)
+        ]
+        viewController?.reloadData(results: mockResults)
+    }
+
+    func showResultForm() {
+        coordinator.showResultForm()
     }
 }

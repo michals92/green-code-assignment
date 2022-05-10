@@ -8,13 +8,11 @@
 import UIKit
 
 final class ResultFormCoordinator: Coordinator {
-    private var navigationController: UINavigationController?
+    private let navigationController: UINavigationController
     private weak var viewController: ResultFormViewController?
 
-    private let window: UIWindow
-
-    init(window: UIWindow) {
-        self.window = window
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
 
     func start() {
@@ -22,8 +20,12 @@ final class ResultFormCoordinator: Coordinator {
         let viewModel = ResultFormViewModel(coordinator: self, viewController: viewController)
         viewController.viewModel = viewModel
         self.viewController = viewController
-        self.navigationController = UINavigationController(rootViewController: viewController)
-        window.rootViewController = navigationController
+
+        self.navigationController.present(viewController, animated: true)
+    }
+
+    func stop() {
+        navigationController.popViewController(animated: true)
     }
 }
 

@@ -40,11 +40,18 @@ class RecordsListViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+
+        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonClicked))
+        self.navigationItem.rightBarButtonItem = addBarButtonItem
     }
 
     func reloadData(results: [SportResult]) {
         dataSource.results = results
         tableView.reloadData()
+    }
+
+    @objc func addButtonClicked() {
+        viewModel?.showResultForm()
     }
 }
 

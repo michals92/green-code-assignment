@@ -28,5 +28,12 @@ final class RecordsListCoordinator: Coordinator {
 }
 
 extension RecordsListCoordinator: RecordsListCoordinatorInput {
-    
+    func showResultForm() {
+        guard let navigationController = navigationController else {
+            fatalError("no navigation controller to present \(ResultFormCoordinator.self)")
+        }
+        
+        let resultFormCoordinator = ResultFormCoordinator(navigationController: navigationController)
+        resultFormCoordinator.start()
+    }
 }
