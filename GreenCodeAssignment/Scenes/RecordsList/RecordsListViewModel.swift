@@ -20,6 +20,7 @@ protocol RecordsListViewModelInput: AnyObject {
 }
 
 final class RecordsListViewModel: RecordsListViewModelInput {
+    @Injected(\.networkProvider) var networkProvider: NetworkProviding
 
     private let coordinator: RecordsListCoordinatorInput
     private weak var viewController: RecordsListViewControllerInput?
@@ -30,6 +31,6 @@ final class RecordsListViewModel: RecordsListViewModelInput {
     }
 
     func viewDidLoad() {
-
+        networkProvider.requestData()
     }
 }

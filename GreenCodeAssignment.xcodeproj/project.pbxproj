@@ -15,6 +15,11 @@
 		71BF6699282A5ED400CDF39E /* RecordsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF6698282A5ED400CDF39E /* RecordsListCoordinator.swift */; };
 		71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */; };
 		71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */; };
+		71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669F282A62E000CDF39E /* InjectionKey.swift */; };
+		71BF66A2282A642300CDF39E /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A1282A642300CDF39E /* NetworkingProvider.swift */; };
+		71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A3282A64BF00CDF39E /* InjectedValues.swift */; };
+		71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A5282A64FB00CDF39E /* Injected.swift */; };
+		71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66AB282A6BE100CDF39E /* SportResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		71BF6698282A5ED400CDF39E /* RecordsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListCoordinator.swift; sourceTree = "<group>"; };
 		71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListViewController.swift; sourceTree = "<group>"; };
 		71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListViewModel.swift; sourceTree = "<group>"; };
+		71BF669F282A62E000CDF39E /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		71BF66A1282A642300CDF39E /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		71BF66A3282A64BF00CDF39E /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
+		71BF66A5282A64FB00CDF39E /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		71BF66AB282A6BE100CDF39E /* SportResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +72,10 @@
 			children = (
 				71BF667B282A5D1E00CDF39E /* AppDelegate.swift */,
 				71BF668F282A5DC200CDF39E /* AppCoordinator.swift */,
+				71BF66AA282A6B9E00CDF39E /* Model */,
 				71BF6694282A5E7800CDF39E /* Scenes */,
+				71BF66A9282A675000CDF39E /* Service */,
+				71BF66A3282A64BF00CDF39E /* InjectedValues.swift */,
 				71BF6691282A5E3F00CDF39E /* Architecture */,
 				71BF6684282A5D2100CDF39E /* Assets.xcassets */,
 				71BF6686282A5D2100CDF39E /* LaunchScreen.storyboard */,
@@ -74,6 +87,8 @@
 		71BF6691282A5E3F00CDF39E /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				71BF669F282A62E000CDF39E /* InjectionKey.swift */,
+				71BF66A5282A64FB00CDF39E /* Injected.swift */,
 				71BF6692282A5E5600CDF39E /* Coordinator.swift */,
 			);
 			path = Architecture;
@@ -95,6 +110,22 @@
 				71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */,
 			);
 			path = RecordsList;
+			sourceTree = "<group>";
+		};
+		71BF66A9282A675000CDF39E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66A1282A642300CDF39E /* NetworkingProvider.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		71BF66AA282A6B9E00CDF39E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66AB282A6BE100CDF39E /* SportResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +201,14 @@
 				71BF6693282A5E5600CDF39E /* Coordinator.swift in Sources */,
 				71BF6690282A5DC200CDF39E /* AppCoordinator.swift in Sources */,
 				71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */,
+				71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */,
 				71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */,
+				71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */,
+				71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
+				71BF66A2282A642300CDF39E /* NetworkingProvider.swift in Sources */,
 				71BF6699282A5ED400CDF39E /* RecordsListCoordinator.swift in Sources */,
+				71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
