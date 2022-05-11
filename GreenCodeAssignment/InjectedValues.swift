@@ -24,11 +24,11 @@ struct InjectedValues {
 // MARK: - List of injected values
 
 private struct NetworkProviderKey: InjectionKey {
-    static var currentValue: NetworkService = FirebaseNetworkService()
+    static var currentValue: ResultService = FirebaseResultService()
 }
 
 extension InjectedValues {
-    var networkProvider: NetworkService {
+    var networkProvider: ResultService {
         get { Self[NetworkProviderKey.self] }
         set { Self[NetworkProviderKey.self] = newValue }
     }

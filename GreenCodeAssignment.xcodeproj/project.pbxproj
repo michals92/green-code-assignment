@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23DC807475F60BAC15777D0D /* Pods_GreenCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */; };
+		71833B67282BBEC900D11CC7 /* FirebaseResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B66282BBEC900D11CC7 /* FirebaseResultService.swift */; };
+		71833B69282BC1F000D11CC7 /* LocalResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B68282BC1F000D11CC7 /* LocalResultService.swift */; };
 		71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */; };
 		71BAF4FF282BAB280022C8A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71BAF501282BAB280022C8A2 /* Localizable.strings */; };
 		71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */; };
@@ -22,7 +24,7 @@
 		71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */; };
 		71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */; };
 		71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669F282A62E000CDF39E /* InjectionKey.swift */; };
-		71BF66A2282A642300CDF39E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A1282A642300CDF39E /* NetworkService.swift */; };
+		71BF66A2282A642300CDF39E /* ResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A1282A642300CDF39E /* ResultService.swift */; };
 		71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A3282A64BF00CDF39E /* InjectedValues.swift */; };
 		71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A5282A64FB00CDF39E /* Injected.swift */; };
 		71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66AB282A6BE100CDF39E /* SportResult.swift */; };
@@ -32,7 +34,7 @@
 		71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */; };
 		71BF66B9282A739400CDF39E /* RecordsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */; };
 		71BF66BB282A84DB00CDF39E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71BF66BA282A84DB00CDF39E /* GoogleService-Info.plist */; };
-		71BF66BE282A8BAA00CDF39E /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66BD282A8BAA00CDF39E /* UserDefaults+Extension.swift */; };
+		71BF66BE282A8BAA00CDF39E /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66BD282A8BAA00CDF39E /* UserDefaults+Extensions.swift */; };
 		71BF66C1282A94BC00CDF39E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 71BF66C0282A94BC00CDF39E /* FirebaseFirestore */; };
 		71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F32C48F9C2BFA4CD366830 /* Pods-GreenCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		71833B66282BBEC900D11CC7 /* FirebaseResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseResultService.swift; sourceTree = "<group>"; };
+		71833B68282BC1F000D11CC7 /* LocalResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalResultService.swift; sourceTree = "<group>"; };
 		71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		71BAF500282BAB280022C8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormDataSource.swift; sourceTree = "<group>"; };
@@ -56,7 +60,7 @@
 		71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListViewController.swift; sourceTree = "<group>"; };
 		71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListViewModel.swift; sourceTree = "<group>"; };
 		71BF669F282A62E000CDF39E /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
-		71BF66A1282A642300CDF39E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		71BF66A1282A642300CDF39E /* ResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultService.swift; sourceTree = "<group>"; };
 		71BF66A3282A64BF00CDF39E /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
 		71BF66A5282A64FB00CDF39E /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		71BF66AB282A6BE100CDF39E /* SportResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResult.swift; sourceTree = "<group>"; };
@@ -66,7 +70,7 @@
 		71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewDataSource.swift; sourceTree = "<group>"; };
 		71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewCell.swift; sourceTree = "<group>"; };
 		71BF66BA282A84DB00CDF39E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		71BF66BD282A8BAA00CDF39E /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		71BF66BD282A8BAA00CDF39E /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
 		C3D9009C4C5B3E3BC90027C3 /* Pods-GreenCodeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.debug.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,7 +169,9 @@
 		71BF66A9282A675000CDF39E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				71BF66A1282A642300CDF39E /* NetworkService.swift */,
+				71BF66A1282A642300CDF39E /* ResultService.swift */,
+				71833B66282BBEC900D11CC7 /* FirebaseResultService.swift */,
+				71833B68282BC1F000D11CC7 /* LocalResultService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -201,7 +207,7 @@
 		71BF66C4282A9A7900CDF39E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				71BF66BD282A8BAA00CDF39E /* UserDefaults+Extension.swift */,
+				71BF66BD282A8BAA00CDF39E /* UserDefaults+Extensions.swift */,
 				71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */,
 				71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */,
 			);
@@ -355,7 +361,9 @@
 				71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */,
 				71BAF506282BAEC40022C8A2 /* ResultFormTableViewCell.swift in Sources */,
 				71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */,
-				71BF66BE282A8BAA00CDF39E /* UserDefaults+Extension.swift in Sources */,
+				71833B69282BC1F000D11CC7 /* LocalResultService.swift in Sources */,
+				71BF66BE282A8BAA00CDF39E /* UserDefaults+Extensions.swift in Sources */,
+				71833B67282BBEC900D11CC7 /* FirebaseResultService.swift in Sources */,
 				71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */,
 				71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */,
 				71BF66B9282A739400CDF39E /* RecordsListTableViewCell.swift in Sources */,
@@ -367,7 +375,7 @@
 				71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */,
 				71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
-				71BF66A2282A642300CDF39E /* NetworkService.swift in Sources */,
+				71BF66A2282A642300CDF39E /* ResultService.swift in Sources */,
 				71BF6699282A5ED400CDF39E /* RecordsListCoordinator.swift in Sources */,
 				71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */,
 			);

@@ -21,7 +21,7 @@ protocol RecordsListViewModelInput: AnyObject {
 }
 
 final class RecordsListViewModel: RecordsListViewModelInput {
-    @Injected(\.networkProvider) var networkProvider: NetworkService
+    @Injected(\.networkProvider) var networkProvider: ResultService
 
     private let coordinator: RecordsListCoordinatorInput
     private weak var viewController: RecordsListViewControllerInput?

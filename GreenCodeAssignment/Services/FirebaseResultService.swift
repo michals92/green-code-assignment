@@ -1,27 +1,17 @@
 //
-//  NetworkingProvider.swift
+//  FirebaseResultService.swift
 //  GreenCodeAssignment
 //
-//  Created by Michal Šimík on 10.05.2022.
+//  Created by Michal Šimík on 11.05.2022.
 //
 
 import Foundation
 import FirebaseFirestore
 
-enum NetworkError: Error {
-    case snapshot
-    case parsing
-}
-
-protocol NetworkService {
-    func getResults(completion: @escaping (Result<[SportResult], NetworkError>) -> Void)
-    func addResult(_ result: SportResult, completion: @escaping (Result<Void, NetworkError>) -> Void)
-}
-
-struct FirebaseNetworkService: NetworkService {
+struct FirebaseResultService: ResultService {
     let collection = Firestore.firestore().collection("sport-results")
 
-    func getResults(completion: @escaping (Result<[SportResult], NetworkError>) -> Void) {
+    func getResults(completion: @escaping (Result<[SportResult], ResultError>) -> Void) {
         collection.getDocuments { snapshot, _ in
             guard let snapshot = snapshot else {
                 DispatchQueue.main.async {
@@ -47,7 +37,7 @@ struct FirebaseNetworkService: NetworkService {
         }
     }
 
-    func addResult(_ result: SportResult, completion: @escaping (Result<Void, NetworkError>) -> Void) {
+    func addResult(_ result: SportResult, completion: @escaping (Result<Void, ResultError>) -> Void) {
         do {
             let jsonData = try result.jsonData()
             let json = try JSONSerialization.jsonObject(with: jsonData, options: [])
