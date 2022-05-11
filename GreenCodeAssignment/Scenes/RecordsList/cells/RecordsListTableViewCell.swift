@@ -12,7 +12,7 @@ class RecordsListTableViewCell: UITableViewCell {
     private let nameLabel = UILabel()
     private let placeLabel = UILabel()
 
-    // duration, type
+    // display duration + type
 
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -37,7 +37,6 @@ class RecordsListTableViewCell: UITableViewCell {
 
     private func setLayout() {
         nameLabel.numberOfLines = 0
-        nameLabel.text = "test"
 
         let stackView = UIStackView(arrangedSubviews: [nameLabel, placeLabel])
         stackView.axis  = .vertical
@@ -46,13 +45,13 @@ class RecordsListTableViewCell: UITableViewCell {
         stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
-        addSubview(stackView)
+        contentView.addSubview(stackView)
 
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor)
+            stackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor)
         ])
     }
 }
