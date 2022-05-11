@@ -21,7 +21,7 @@ protocol RecordsListViewModelInput: AnyObject {
 }
 
 final class RecordsListViewModel: RecordsListViewModelInput {
-    @Injected(\.networkProvider) var networkProvider: NetworkProviding
+    @Injected(\.networkProvider) var networkProvider: NetworkService
 
     private let coordinator: RecordsListCoordinatorInput
     private weak var viewController: RecordsListViewControllerInput?
@@ -32,13 +32,15 @@ final class RecordsListViewModel: RecordsListViewModelInput {
     }
 
     func viewDidLoad() {
-        networkProvider.requestData()
-
-        let mockResults = [
-            SportResult(name: "test", place: "test place", duration: 21, type: .local),
-            SportResult(name: "test 1", place: "test place 2", duration: 21, type: .local)
-        ]
-        viewController?.reloadData(results: mockResults)
+        networkProvider.getResults { [weak self] result in
+            switch result {
+            case .success(let results):
+                self?.viewController?.reloadData(results: results)
+            case .failure(let error):
+                print(error)
+                // TODO: show error
+            }
+        }
     }
 
     func showResultForm() {

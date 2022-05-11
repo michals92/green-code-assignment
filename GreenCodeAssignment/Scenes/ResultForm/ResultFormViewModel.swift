@@ -20,7 +20,7 @@ protocol ResultFormViewModelInput: AnyObject {
 }
 
 final class ResultFormViewModel: ResultFormViewModelInput {
-    @Injected(\.networkProvider) var networkProvider: NetworkProviding
+    @Injected(\.networkProvider) var networkProvider: NetworkService
 
     private let coordinator: ResultFormCoordinatorInput
     private weak var viewController: ResultFormViewControllerInput?
@@ -31,6 +31,6 @@ final class ResultFormViewModel: ResultFormViewModelInput {
     }
 
     func viewDidLoad() {
-        networkProvider.requestData()
+
     }
 }
