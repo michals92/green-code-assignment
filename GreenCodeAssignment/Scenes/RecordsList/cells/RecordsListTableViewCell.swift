@@ -11,6 +11,7 @@ class RecordsListTableViewCell: UITableViewCell {
 
     private let nameLabel = UILabel()
     private let placeLabel = UILabel()
+    private let typeLabel = UILabel()
 
     // display duration + type
 
@@ -23,6 +24,7 @@ class RecordsListTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayout()
+        setAppearance()
     }
 
     @available(*, unavailable)
@@ -33,15 +35,21 @@ class RecordsListTableViewCell: UITableViewCell {
     func configure(result: SportResult) {
         nameLabel.text = result.name
         placeLabel.text = result.place
+        typeLabel.text = result.type.rawValue
+        typeLabel.textColor = result.type == .remote ? .systemGreen : .systemBlue
     }
 
     private func setLayout() {
-        nameLabel.numberOfLines = 0
+        let headerStackView = UIStackView(arrangedSubviews: [nameLabel, typeLabel])
+        headerStackView.axis  = .horizontal
+        headerStackView.distribution  = .fill
+        headerStackView.alignment = UIStackView.Alignment.leading
+        headerStackView.spacing = 5
 
-        let stackView = UIStackView(arrangedSubviews: [nameLabel, placeLabel])
+        let stackView = UIStackView(arrangedSubviews: [headerStackView, placeLabel])
         stackView.axis  = .vertical
         stackView.distribution  = .equalSpacing
-        stackView.alignment = UIStackView.Alignment.leading
+        stackView.alignment = UIStackView.Alignment.fill
         stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -53,5 +61,15 @@ class RecordsListTableViewCell: UITableViewCell {
             stackView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor)
         ])
+    }
+
+    func setAppearance() {
+        nameLabel.font = .systemFont(ofSize: 18)
+        nameLabel.numberOfLines = 0
+
+        placeLabel.font = .systemFont(ofSize: 14, weight: .medium)
+
+        typeLabel.font = .systemFont(ofSize: 12)
+        typeLabel.textAlignment = .right
     }
 }
