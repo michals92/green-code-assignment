@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum SportResultType: String, Decodable {
+enum SportResultType: String, Codable {
     case local
     case remote
 }
 
-struct SportResult: Decodable {
+struct SportResult: Codable {
     let name: String
     let place: String
     let duration: Double
