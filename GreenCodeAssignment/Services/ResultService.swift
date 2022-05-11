@@ -10,6 +10,15 @@ import Foundation
 enum ResultError: Error {
     case snapshot
     case parsing
+
+    var description: String {
+        switch self {
+        case .snapshot:
+            return "ResultError.snapshot".localized
+        case .parsing:
+            return "ResultError.parsing".localized
+        }
+    }
 }
 
 protocol ResultService {
