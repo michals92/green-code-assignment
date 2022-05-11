@@ -38,8 +38,8 @@ class ResultFormTableViewCell: UITableViewCell {
 
         let stackView = UIStackView(arrangedSubviews: [nameLabel, valueTextField])
 
-        stackView.axis  = .horizontal
-        stackView.distribution  = .fill
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
         stackView.alignment = UIStackView.Alignment.leading
         stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
