@@ -12,11 +12,13 @@ protocol ResultFormViewControllerInput: AnyObject {
 }
 
 protocol ResultFormCoordinatorInput: AnyObject {
-
+    func stop()
 }
 
 protocol ResultFormViewModelInput: AnyObject {
     func viewDidLoad()
+    func cancel()
+    func confirm()
 }
 
 final class ResultFormViewModel: ResultFormViewModelInput {
@@ -32,5 +34,13 @@ final class ResultFormViewModel: ResultFormViewModelInput {
 
     func viewDidLoad() {
 
+    }
+
+    func cancel() {
+        coordinator.stop()
+    }
+
+    func confirm() {
+        coordinator.stop()
     }
 }

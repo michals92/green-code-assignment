@@ -14,16 +14,27 @@ class ResultFormViewController: UIViewController {
     override func loadView() {
         super.loadView()
         setLayout()
+        title = "ResultForm.title".localized
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         viewModel?.viewDidLoad()
     }
 
     func setLayout() {
         view.backgroundColor = .systemBackground
+
+        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonClicked))
+        self.navigationItem.rightBarButtonItem = addBarButtonItem
+    }
+
+    @objc func cancelButtonClicked() {
+        viewModel?.cancel()
+    }
+
+    @objc func confirmButtonClicked() {
+        viewModel?.confirm()
     }
 }
 
