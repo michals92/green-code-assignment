@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23DC807475F60BAC15777D0D /* Pods_GreenCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */; };
 		71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF667B282A5D1E00CDF39E /* AppDelegate.swift */; };
 		71BF6685282A5D2100CDF39E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BF6684282A5D2100CDF39E /* Assets.xcassets */; };
 		71BF6688282A5D2100CDF39E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BF6686282A5D2100CDF39E /* LaunchScreen.storyboard */; };
@@ -16,7 +17,7 @@
 		71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */; };
 		71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */; };
 		71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669F282A62E000CDF39E /* InjectionKey.swift */; };
-		71BF66A2282A642300CDF39E /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A1282A642300CDF39E /* NetworkingProvider.swift */; };
+		71BF66A2282A642300CDF39E /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A1282A642300CDF39E /* NetworkingService.swift */; };
 		71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A3282A64BF00CDF39E /* InjectedValues.swift */; };
 		71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A5282A64FB00CDF39E /* Injected.swift */; };
 		71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66AB282A6BE100CDF39E /* SportResult.swift */; };
@@ -25,11 +26,15 @@
 		71BF66B4282A714200CDF39E /* ResultFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */; };
 		71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */; };
 		71BF66B9282A739400CDF39E /* RecordsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */; };
-		D6DBE9A7999C6C143B02290B /* Pods_GreenCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */; };
+		71BF66BB282A84DB00CDF39E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71BF66BA282A84DB00CDF39E /* GoogleService-Info.plist */; };
+		71BF66BE282A8BAA00CDF39E /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66BD282A8BAA00CDF39E /* UserDefaults+Extension.swift */; };
+		71BF66C1282A94BC00CDF39E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 71BF66C0282A94BC00CDF39E /* FirebaseFirestore */; };
+		71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1DD88400443C6CD9358B452D /* Pods-GreenCodeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.debug.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43F32C48F9C2BFA4CD366830 /* Pods-GreenCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		71BF6678282A5D1E00CDF39E /* GreenCodeAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenCodeAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BF667B282A5D1E00CDF39E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71BF6684282A5D2100CDF39E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,7 +46,7 @@
 		71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListViewController.swift; sourceTree = "<group>"; };
 		71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListViewModel.swift; sourceTree = "<group>"; };
 		71BF669F282A62E000CDF39E /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
-		71BF66A1282A642300CDF39E /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		71BF66A1282A642300CDF39E /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		71BF66A3282A64BF00CDF39E /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
 		71BF66A5282A64FB00CDF39E /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		71BF66AB282A6BE100CDF39E /* SportResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResult.swift; sourceTree = "<group>"; };
@@ -50,8 +55,10 @@
 		71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormViewModel.swift; sourceTree = "<group>"; };
 		71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewDataSource.swift; sourceTree = "<group>"; };
 		71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewCell.swift; sourceTree = "<group>"; };
-		7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F33C967E7136599978151798 /* Pods-GreenCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		71BF66BA282A84DB00CDF39E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		71BF66BD282A8BAA00CDF39E /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		C3D9009C4C5B3E3BC90027C3 /* Pods-GreenCodeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.debug.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DBE9A7999C6C143B02290B /* Pods_GreenCodeAssignment.framework in Frameworks */,
+				23DC807475F60BAC15777D0D /* Pods_GreenCodeAssignment.framework in Frameworks */,
+				71BF66C1282A94BC00CDF39E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +80,7 @@
 				71BF667A282A5D1E00CDF39E /* GreenCodeAssignment */,
 				71BF6679282A5D1E00CDF39E /* Products */,
 				B0A6619DFC52689EE1D1B212 /* Pods */,
-				E3D3B0800AD75C615337FA60 /* Frameworks */,
+				7C48B64D269B1B79AC93CF48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,13 +97,15 @@
 			children = (
 				71BF667B282A5D1E00CDF39E /* AppDelegate.swift */,
 				71BF668F282A5DC200CDF39E /* AppCoordinator.swift */,
-				71BF66AA282A6B9E00CDF39E /* Model */,
+				71BF66AA282A6B9E00CDF39E /* Models */,
 				71BF6694282A5E7800CDF39E /* Scenes */,
-				71BF66A9282A675000CDF39E /* Service */,
+				71BF66A9282A675000CDF39E /* Services */,
 				71BF66A3282A64BF00CDF39E /* InjectedValues.swift */,
+				71BF66C4282A9A7900CDF39E /* Extensions */,
 				71BF6691282A5E3F00CDF39E /* Architecture */,
 				71BF6684282A5D2100CDF39E /* Assets.xcassets */,
 				71BF6686282A5D2100CDF39E /* LaunchScreen.storyboard */,
+				71BF66BA282A84DB00CDF39E /* GoogleService-Info.plist */,
 				71BF6689282A5D2100CDF39E /* Info.plist */,
 			);
 			path = GreenCodeAssignment;
@@ -132,20 +142,20 @@
 			path = RecordsList;
 			sourceTree = "<group>";
 		};
-		71BF66A9282A675000CDF39E /* Service */ = {
+		71BF66A9282A675000CDF39E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				71BF66A1282A642300CDF39E /* NetworkingProvider.swift */,
+				71BF66A1282A642300CDF39E /* NetworkingService.swift */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		71BF66AA282A6B9E00CDF39E /* Model */ = {
+		71BF66AA282A6B9E00CDF39E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				71BF66AB282A6BE100CDF39E /* SportResult.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		71BF66AE282A70D100CDF39E /* ResultForm */ = {
@@ -166,21 +176,30 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
+		71BF66C4282A9A7900CDF39E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66BD282A8BAA00CDF39E /* UserDefaults+Extension.swift */,
+				71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7C48B64D269B1B79AC93CF48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B0A6619DFC52689EE1D1B212 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1DD88400443C6CD9358B452D /* Pods-GreenCodeAssignment.debug.xcconfig */,
-				F33C967E7136599978151798 /* Pods-GreenCodeAssignment.release.xcconfig */,
+				C3D9009C4C5B3E3BC90027C3 /* Pods-GreenCodeAssignment.debug.xcconfig */,
+				43F32C48F9C2BFA4CD366830 /* Pods-GreenCodeAssignment.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		E3D3B0800AD75C615337FA60 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7942EBC585AFDCEB8A68BEA4 /* Pods_GreenCodeAssignment.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71BF668C282A5D2100CDF39E /* Build configuration list for PBXNativeTarget "GreenCodeAssignment" */;
 			buildPhases = (
-				ECD1949439C75C2A9E375854 /* [CP] Check Pods Manifest.lock */,
+				B87BD7A0C5E2A96033C8EC9A /* [CP] Check Pods Manifest.lock */,
 				71BF66AD282A6F0A00CDF39E /* Swiftlint */,
 				71BF6674282A5D1E00CDF39E /* Sources */,
 				71BF6675282A5D1E00CDF39E /* Frameworks */,
@@ -201,6 +220,9 @@
 			dependencies = (
 			);
 			name = GreenCodeAssignment;
+			packageProductDependencies = (
+				71BF66C0282A94BC00CDF39E /* FirebaseFirestore */,
+			);
 			productName = GreenCodeAssignment;
 			productReference = 71BF6678282A5D1E00CDF39E /* GreenCodeAssignment.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +251,9 @@
 				Base,
 			);
 			mainGroup = 71BF666F282A5D1E00CDF39E;
+			packageReferences = (
+				71BF66BF282A94BC00CDF39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 71BF6679282A5D1E00CDF39E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -245,6 +270,7 @@
 			files = (
 				71BF6688282A5D2100CDF39E /* LaunchScreen.storyboard in Resources */,
 				71BF6685282A5D2100CDF39E /* Assets.xcassets in Resources */,
+				71BF66BB282A84DB00CDF39E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +295,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		ECD1949439C75C2A9E375854 /* [CP] Check Pods Manifest.lock */ = {
+		B87BD7A0C5E2A96033C8EC9A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,6 +328,7 @@
 				71BF66B4282A714200CDF39E /* ResultFormViewModel.swift in Sources */,
 				71BF6690282A5DC200CDF39E /* AppCoordinator.swift in Sources */,
 				71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */,
+				71BF66BE282A8BAA00CDF39E /* UserDefaults+Extension.swift in Sources */,
 				71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */,
 				71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */,
 				71BF66B9282A739400CDF39E /* RecordsListTableViewCell.swift in Sources */,
@@ -310,8 +337,9 @@
 				71BF66B2282A713800CDF39E /* ResultFormViewController.swift in Sources */,
 				71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */,
 				71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */,
+				71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
-				71BF66A2282A642300CDF39E /* NetworkingProvider.swift in Sources */,
+				71BF66A2282A642300CDF39E /* NetworkingService.swift in Sources */,
 				71BF6699282A5ED400CDF39E /* RecordsListCoordinator.swift in Sources */,
 				71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */,
 			);
@@ -447,7 +475,7 @@
 		};
 		71BF668D282A5D2100CDF39E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DD88400443C6CD9358B452D /* Pods-GreenCodeAssignment.debug.xcconfig */;
+			baseConfigurationReference = C3D9009C4C5B3E3BC90027C3 /* Pods-GreenCodeAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,7 +494,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.michalsimik.GreenCodeAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michalsimik.greencodeassignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -476,7 +504,7 @@
 		};
 		71BF668E282A5D2100CDF39E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F33C967E7136599978151798 /* Pods-GreenCodeAssignment.release.xcconfig */;
+			baseConfigurationReference = 43F32C48F9C2BFA4CD366830 /* Pods-GreenCodeAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,7 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.michalsimik.GreenCodeAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michalsimik.greencodeassignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -525,6 +553,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71BF66BF282A94BC00CDF39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71BF66C0282A94BC00CDF39E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71BF66BF282A94BC00CDF39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71BF6670282A5D1E00CDF39E /* Project object */;
 }
