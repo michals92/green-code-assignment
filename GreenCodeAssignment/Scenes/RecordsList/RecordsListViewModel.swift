@@ -18,10 +18,12 @@ protocol RecordsListCoordinatorInput: AnyObject {
 protocol RecordsListViewModelInput: AnyObject {
     func viewDidLoad()
     func showResultForm()
+    func getResults(for type: RecordListType)
 }
 
 final class RecordsListViewModel: RecordsListViewModelInput {
-    @Injected(\.networkProvider) var networkProvider: ResultService
+    @Injected(\.remoteResultService) var remoteResultService: ResultService
+    @Injected(\.localResultService) var localResultService: LocalResultService
 
     private let coordinator: RecordsListCoordinatorInput
     private weak var viewController: RecordsListViewControllerInput?
@@ -32,16 +34,33 @@ final class RecordsListViewModel: RecordsListViewModelInput {
     }
 
     func viewDidLoad() {
-        networkProvider.getResults { [weak self] result in
-            switch result {
-            case .success(let results):
-                self?.viewController?.reloadData(results: results)
-            case .failure(let error):
-                print(error)
-                // TODO: show error
+        getResults(for: .all)
+    }
+
+    func getResults(for type: RecordListType) {
+        switch type {
+        case .remote, .all:
+            var allResults: [SportResult] = []
+
+            if case .all = type {
+                allResults = localResultService.getResults()
             }
+
+            remoteResultService.getResults { [weak self] result in
+                switch result {
+                case .success(let remoteResults):
+                    allResults.append(contentsOf: remoteResults)
+                    self?.viewController?.reloadData(results: allResults)
+                case .failure(let error):
+                    print(error)
+                    // TODO: show error
+                }
+            }
+        case .local:
+            viewController?.reloadData(results: localResultService.getResults())
         }
     }
+
 
     func showResultForm() {
         coordinator.showResultForm()

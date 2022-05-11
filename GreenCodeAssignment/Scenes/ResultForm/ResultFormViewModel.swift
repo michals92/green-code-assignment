@@ -22,7 +22,8 @@ protocol ResultFormViewModelInput: AnyObject {
 }
 
 final class ResultFormViewModel: ResultFormViewModelInput {
-    @Injected(\.networkProvider) var networkProvider: ResultService
+    @Injected(\.remoteResultService) var remoteResultService: ResultService
+    @Injected(\.localResultService) var localResultService: LocalResultService
 
     private let coordinator: ResultFormCoordinatorInput
     private weak var viewController: ResultFormViewControllerInput?

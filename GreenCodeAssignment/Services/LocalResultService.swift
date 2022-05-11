@@ -7,13 +7,12 @@
 
 import Foundation
 
-struct LocalResultService: ResultService {
-    func getResults(completion: @escaping (Result<[SportResult], ResultError>) -> Void) {
-        completion(.success(UserDefaults.localSportResults))
+struct LocalResultService {
+    func getResults() -> [SportResult] {
+        UserDefaults.localSportResults
     }
 
-    func addResult(_ result: SportResult, completion: @escaping (Result<Void, ResultError>) -> Void) {
+    func addResult(_ result: SportResult) {
         UserDefaults.localSportResults.append(result)
-        completion(.success(()))
     }
 }
