@@ -8,24 +8,27 @@
 import UIKit
 
 final class ResultFormCoordinator: Coordinator {
-    private let navigationController: UINavigationController
+    private let previousController: UIViewController
+    private weak var navigationController: UINavigationController?
     private weak var viewController: ResultFormViewController?
 
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(previousController: UIViewController) {
+        self.previousController = previousController
     }
 
     func start() {
         let viewController = ResultFormViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
         let viewModel = ResultFormViewModel(coordinator: self, viewController: viewController)
         viewController.viewModel = viewModel
         self.viewController = viewController
+        self.navigationController = navigationController
 
-        self.navigationController.present(viewController, animated: true)
+        self.previousController.present(navigationController, animated: true)
     }
 
     func stop() {
-        navigationController.popViewController(animated: true)
+        previousController.dismiss(animated: true)
     }
 }
 
