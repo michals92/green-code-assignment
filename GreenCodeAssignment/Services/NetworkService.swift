@@ -8,14 +8,14 @@
 import Foundation
 import FirebaseFirestore
 
-protocol NetworkService {
-    func getResults(completion: @escaping (Result<[SportResult], NetworkError>) -> Void)
-    func addResult(_ result: SportResult, completion: @escaping (Result<Void, NetworkError>) -> Void)
-}
-
 enum NetworkError: Error {
     case snapshot
     case parsing
+}
+
+protocol NetworkService {
+    func getResults(completion: @escaping (Result<[SportResult], NetworkError>) -> Void)
+    func addResult(_ result: SportResult, completion: @escaping (Result<Void, NetworkError>) -> Void)
 }
 
 struct FirebaseNetworkService: NetworkService {
@@ -24,7 +24,9 @@ struct FirebaseNetworkService: NetworkService {
     func getResults(completion: @escaping (Result<[SportResult], NetworkError>) -> Void) {
         collection.getDocuments { snapshot, _ in
             guard let snapshot = snapshot else {
-                completion(.failure(.snapshot))
+                DispatchQueue.main.async {
+                    completion(.failure(.snapshot))
+                }
                 return
             }
 
@@ -34,9 +36,13 @@ struct FirebaseNetworkService: NetworkService {
                     let result = try JSONDecoder().decode(SportResult.self, from: jsonData)
                     return result
                 }
-                completion(.success(results))
+                DispatchQueue.main.async {
+                    completion(.success(results))
+                }
             } catch {
-                completion(.failure(.parsing))
+                DispatchQueue.main.async {
+                    completion(.failure(.parsing))
+                }
             }
         }
     }
@@ -52,7 +58,9 @@ struct FirebaseNetworkService: NetworkService {
             }
 
             collection.addDocument(data: dictionary) { error in
-                completion(error != nil ? .failure(.snapshot) : .success(()))
+                DispatchQueue.main.async {
+                    completion(error != nil ? .failure(.snapshot) : .success(()))
+                }
             }
         } catch {
             completion(.failure(.parsing))
