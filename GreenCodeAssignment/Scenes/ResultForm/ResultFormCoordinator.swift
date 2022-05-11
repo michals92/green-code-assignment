@@ -30,6 +30,18 @@ final class ResultFormCoordinator: Coordinator {
     func stop() {
         previousController.dismiss(animated: true)
     }
+
+    func showAlert(title: String, message: String, repeatHandler: @escaping () -> Void) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let repeatAction = UIAlertAction(title: "alert.repeat".localized, style: .default) { _ in
+            repeatHandler()
+        }
+        let cancelAction = UIAlertAction(title: "alert.cancel".localized, style: .cancel)
+        alert.addAction(repeatAction)
+        alert.addAction(cancelAction)
+
+        viewController?.present(alert, animated: true)
+    }
 }
 
 extension ResultFormCoordinator: ResultFormCoordinatorInput {

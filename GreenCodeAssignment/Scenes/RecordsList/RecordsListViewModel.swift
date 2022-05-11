@@ -13,6 +13,7 @@ protocol RecordsListViewControllerInput: AnyObject {
 
 protocol RecordsListCoordinatorInput: AnyObject {
     func showResultForm()
+    func showAlert(title: String, message: String, repeatHandler: @escaping () -> Void)
 }
 
 protocol RecordsListViewModelInput: AnyObject {
@@ -52,8 +53,11 @@ final class RecordsListViewModel: RecordsListViewModelInput {
                     allResults.append(contentsOf: remoteResults)
                     self?.viewController?.reloadData(results: allResults)
                 case .failure(let error):
-                    print(error)
-                    // TODO: show error
+                    self?.coordinator.showAlert(
+                        title: "error.title".localized,
+                        message: error.description,
+                        repeatHandler: { self?.getResults(for: type) }
+                    )
                 }
             }
         case .local:

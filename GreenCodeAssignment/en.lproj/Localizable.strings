@@ -11,8 +11,18 @@
 
 // ResultForm
 "ResultForm.title" = "Add result";
+"ResultForm.applyButton" = "";
 
 // RecordListType
 "RecordListType.all" = "All";
 "RecordListType.remote" = "Remote";
 "RecordListType.local" = "Local";
+
+"alert.repeat" = "Repeat";
+"alert.cancel" = "Cancel";
+"error.title" = "Error occurred";
+
+// ResultError
+"ResultError.snapshot" = "Check your internet connection";
+"ResultError.parsing" = "Bad JSON structure";
+
