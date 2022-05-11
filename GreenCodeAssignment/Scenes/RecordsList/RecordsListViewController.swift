@@ -32,6 +32,7 @@ class RecordsListViewController: UIViewController {
 
     func setLayout() {
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         let stackView = UIStackView(arrangedSubviews: [segmentedControl, tableView])
         stackView.axis = .vertical
@@ -48,8 +49,8 @@ class RecordsListViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.widthAnchor.constraint(equalTo: stackView.widthAnchor),
-            segmentedControl.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            segmentedControl.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            segmentedControl.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 16),
+            segmentedControl.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -16)
         ])
 
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonClicked))
