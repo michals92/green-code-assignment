@@ -10,6 +10,9 @@
 		23DC807475F60BAC15777D0D /* Pods_GreenCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */; };
 		71833B67282BBEC900D11CC7 /* FirebaseResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B66282BBEC900D11CC7 /* FirebaseResultService.swift */; };
 		71833B69282BC1F000D11CC7 /* LocalResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B68282BC1F000D11CC7 /* LocalResultService.swift */; };
+		71833B6B282BCF1000D11CC7 /* SportResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6A282BCF1000D11CC7 /* SportResultType.swift */; };
+		71833B6D282BD1A300D11CC7 /* RecordListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6C282BD1A300D11CC7 /* RecordListType.swift */; };
+		71833B6F282BD58300D11CC7 /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */; };
 		71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */; };
 		71BAF4FF282BAB280022C8A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71BAF501282BAB280022C8A2 /* Localizable.strings */; };
 		71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */; };
@@ -44,6 +47,9 @@
 		43F32C48F9C2BFA4CD366830 /* Pods-GreenCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		71833B66282BBEC900D11CC7 /* FirebaseResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseResultService.swift; sourceTree = "<group>"; };
 		71833B68282BC1F000D11CC7 /* LocalResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalResultService.swift; sourceTree = "<group>"; };
+		71833B6A282BCF1000D11CC7 /* SportResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResultType.swift; sourceTree = "<group>"; };
+		71833B6C282BD1A300D11CC7 /* RecordListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListType.swift; sourceTree = "<group>"; };
+		71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
 		71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		71BAF500282BAB280022C8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormDataSource.swift; sourceTree = "<group>"; };
@@ -180,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				71BF66AB282A6BE100CDF39E /* SportResult.swift */,
+				71833B6A282BCF1000D11CC7 /* SportResultType.swift */,
+				71833B6C282BD1A300D11CC7 /* RecordListType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 				71BF66BD282A8BAA00CDF39E /* UserDefaults+Extensions.swift */,
 				71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */,
 				71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */,
+				71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -356,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71BF6693282A5E5600CDF39E /* Coordinator.swift in Sources */,
+				71833B6B282BCF1000D11CC7 /* SportResultType.swift in Sources */,
 				71BF66B4282A714200CDF39E /* ResultFormViewModel.swift in Sources */,
 				71BF6690282A5DC200CDF39E /* AppCoordinator.swift in Sources */,
 				71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */,
@@ -374,10 +384,12 @@
 				71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */,
 				71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */,
 				71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */,
+				71833B6F282BD58300D11CC7 /* UISegmentedControl+Extensions.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
 				71BF66A2282A642300CDF39E /* ResultService.swift in Sources */,
 				71BF6699282A5ED400CDF39E /* RecordsListCoordinator.swift in Sources */,
 				71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */,
+				71833B6D282BD1A300D11CC7 /* RecordListType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

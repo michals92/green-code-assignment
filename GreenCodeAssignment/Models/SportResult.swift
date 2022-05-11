@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum SportResultType: String, Codable {
-    case local
-    case remote
-}
-
 struct SportResult: Codable {
     let name: String
     let place: String
