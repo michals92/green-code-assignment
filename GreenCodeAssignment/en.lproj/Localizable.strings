@@ -7,7 +7,7 @@
 */
 
 // RecordsList
-"RecordsList.title" = "Results";
+"RecordsList.title" = "Records";
 
 // ResultForm
-"ResultForm.title" = "Add record";
+"ResultForm.title" = "Add result";
