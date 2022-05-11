@@ -11,3 +11,8 @@
 
 // ResultForm
 "ResultForm.title" = "Add result";
+
+// RecordListType
+"RecordListType.all" = "All";
+"RecordListType.remote" = "Remote";
+"RecordListType.local" = "Local";
