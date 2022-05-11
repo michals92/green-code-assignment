@@ -16,10 +16,11 @@ class RecordsListViewController: UIViewController {
     override func loadView() {
         super.loadView()
         setLayout()
-        title = "Výsledky"
+        title = "RecordsList.title".localized
 
         tableView.register(RecordsListTableViewCell.self, forCellReuseIdentifier: String(describing: RecordsListTableViewCell.self))
         tableView.dataSource = dataSource
+        tableView.allowsSelection = false
     }
 
     override func viewDidLoad() {

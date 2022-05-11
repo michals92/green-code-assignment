@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23DC807475F60BAC15777D0D /* Pods_GreenCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */; };
+		71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */; };
+		71BAF4FF282BAB280022C8A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71BAF501282BAB280022C8A2 /* Localizable.strings */; };
 		71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF667B282A5D1E00CDF39E /* AppDelegate.swift */; };
 		71BF6685282A5D2100CDF39E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BF6684282A5D2100CDF39E /* Assets.xcassets */; };
 		71BF6688282A5D2100CDF39E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BF6686282A5D2100CDF39E /* LaunchScreen.storyboard */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F32C48F9C2BFA4CD366830 /* Pods-GreenCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		71BAF500282BAB280022C8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		71BF6678282A5D1E00CDF39E /* GreenCodeAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenCodeAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BF667B282A5D1E00CDF39E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71BF6684282A5D2100CDF39E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				71BF66C4282A9A7900CDF39E /* Extensions */,
 				71BF6691282A5E3F00CDF39E /* Architecture */,
 				71BF6684282A5D2100CDF39E /* Assets.xcassets */,
+				71BAF501282BAB280022C8A2 /* Localizable.strings */,
 				71BF6686282A5D2100CDF39E /* LaunchScreen.storyboard */,
 				71BF66BA282A84DB00CDF39E /* GoogleService-Info.plist */,
 				71BF6689282A5D2100CDF39E /* Info.plist */,
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				71BF66BD282A8BAA00CDF39E /* UserDefaults+Extension.swift */,
+				71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */,
 				71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */,
 			);
 			path = Extensions;
@@ -269,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71BF6688282A5D2100CDF39E /* LaunchScreen.storyboard in Resources */,
+				71BAF4FF282BAB280022C8A2 /* Localizable.strings in Resources */,
 				71BF6685282A5D2100CDF39E /* Assets.xcassets in Resources */,
 				71BF66BB282A84DB00CDF39E /* GoogleService-Info.plist in Resources */,
 			);
@@ -337,6 +344,7 @@
 				71BF66B2282A713800CDF39E /* ResultFormViewController.swift in Sources */,
 				71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */,
 				71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */,
+				71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */,
 				71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
 				71BF66A2282A642300CDF39E /* NetworkingService.swift in Sources */,
@@ -348,6 +356,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		71BAF501282BAB280022C8A2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71BAF500282BAB280022C8A2 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		71BF6686282A5D2100CDF39E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
