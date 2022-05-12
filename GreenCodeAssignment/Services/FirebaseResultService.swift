@@ -5,11 +5,11 @@
 //  Created by Michal Šimík on 11.05.2022.
 //
 
-import Foundation
+import UIKit
 import FirebaseFirestore
 
 struct FirebaseResultService: ResultService {
-    let collection = Firestore.firestore().collection("sport-results")
+    let collection = Firestore.firestore().collection("sport-results-\(UIDevice.current.identifierForVendor?.uuidString ?? "default")")
 
     func getResults(completion: @escaping (Result<[SportResult], ResultError>) -> Void) {
         collection.getDocuments { snapshot, _ in
