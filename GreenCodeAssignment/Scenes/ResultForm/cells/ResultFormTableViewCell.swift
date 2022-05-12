@@ -88,12 +88,19 @@ class ResultFormTableViewCell: UITableViewCell {
             textFieldHandler = cellModel.textFieldHandler
         case .text:
             let textField = UITextField()
+            textField.font = .systemFont(ofSize: 18, weight: .medium)
             textField.placeholder = "ResultFormTableViewCell.textFieldPlaceholder".localized + cellModel.formItem.name
 
             textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
 
             self.textField = textField
             stackView.addArrangedSubview(textField)
+
+            let underlineView = UIView()
+            underlineView.backgroundColor = .lightGray
+            underlineView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+
+            stackView.addArrangedSubview(underlineView)
             textFieldHandler = cellModel.textFieldHandler
         }
 
@@ -101,7 +108,6 @@ class ResultFormTableViewCell: UITableViewCell {
     }
 
     private func setLayout() {
-        nameLabel.numberOfLines = 0
         nameLabel.font = .systemFont(ofSize: 12, weight: .medium)
 
         stackView.addArrangedSubview(nameLabel)

@@ -13,7 +13,7 @@ protocol ResultFormViewControllerInput: AnyObject {
 
 protocol ResultFormCoordinatorInput: AnyObject {
     func stop()
-    func showAlert(title: String, message: String, repeatHandler: @escaping () -> Void)
+    func showAlert(title: String, message: String, repeatHandler: Action?)
 }
 
 protocol ResultFormViewModelInput: AnyObject {
@@ -40,8 +40,8 @@ final class ResultFormViewModel: ResultFormViewModelInput {
         let array = [
             FormItem(name: "name", type: .text("")),
             FormItem(name: "place", type: .text("")),
-            FormItem(name: "duration", type: .duration(0)),
-            FormItem(name: "type", type: .type(.local))
+            FormItem(name: "type", type: .type(.local)),
+            FormItem(name: "duration", type: .duration(0))
         ]
 
         cellModels = array.map { ResultFormTableViewCellModel(formItem: $0) }
@@ -52,24 +52,39 @@ final class ResultFormViewModel: ResultFormViewModelInput {
         coordinator.stop()
     }
 
+    func checkMandatoryFields(items: [String: Any]) -> Bool {
+        let name = items["name"] as? String ?? ""
+        let place = items["place"] as? String ?? ""
+
+        if name.isEmpty || place.isEmpty {
+            return false
+        }
+        return true
+    }
+
     func confirm() {
-        var dictionary: [String: Any] = [:]
+        var values: [String: Any] = [:]
 
         for cellModel in cellModels {
             let type = cellModel.formItem.type
             let name = cellModel.formItem.name
             switch type {
             case .text(let value):
-                dictionary[name] = value
+                values[name] = value
             case .type(let sportResultType):
-                dictionary[name] = sportResultType.rawValue
+                values[name] = sportResultType.rawValue
             case .duration(let value):
-                dictionary[name] = value
+                values[name] = value
             }
         }
 
+        guard checkMandatoryFields(items: values) else {
+            coordinator.showAlert(title: "error.title".localized, message: "error.mandatoryFields".localized, repeatHandler: nil)
+            return
+        }
+
         do {
-            let jsonData = try JSONSerialization.data(withJSONObject: dictionary)
+            let jsonData = try JSONSerialization.data(withJSONObject: values)
             let sportResult = try JSONDecoder().decode(SportResult.self, from: jsonData)
 
             switch sportResult.type {

@@ -18,9 +18,12 @@
 "RecordListType.remote" = "Remote";
 "RecordListType.local" = "Local";
 
-"alert.repeat" = "Repeat";
+// alerts
+"alert.repeat" = "Try again";
 "alert.cancel" = "Cancel";
+"alert.ok" = "OK";
 "error.title" = "Error occurred";
+"error.mandatoryFields" = "Please, fill all mandatory fields.";
 
 // ResultError
 "ResultError.snapshot" = "Check your internet connection";
