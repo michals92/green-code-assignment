@@ -7,13 +7,18 @@
 
 import UIKit
 
+typealias Action = () -> Void
+
 final class ResultFormCoordinator: Coordinator {
     private let previousController: UIViewController
     private weak var navigationController: UINavigationController?
     private weak var viewController: ResultFormViewController?
 
-    init(previousController: UIViewController) {
+    let completionAction: Action?
+
+    init(previousController: UIViewController, completionAction: Action?) {
         self.previousController = previousController
+        self.completionAction = completionAction
     }
 
     func start() {
@@ -28,20 +33,23 @@ final class ResultFormCoordinator: Coordinator {
     }
 
     func stop() {
+        completionAction?()
         previousController.dismiss(animated: true)
     }
 }
 
 extension ResultFormCoordinator: ResultFormCoordinatorInput {
-    func showAlert(title: String, message: String, repeatHandler: @escaping () -> Void) {
+    func showAlert(title: String, message: String, repeatHandler: Action?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let repeatAction = UIAlertAction(title: "alert.repeat".localized, style: .default) { _ in
-            repeatHandler()
-        }
-        let cancelAction = UIAlertAction(title: "alert.cancel".localized, style: .cancel)
-        alert.addAction(repeatAction)
-        alert.addAction(cancelAction)
 
+        if let repeatHandler = repeatHandler {
+            let repeatAction = UIAlertAction(title: "alert.repeat".localized, style: .default) { _ in
+                repeatHandler()
+            }
+            alert.addAction(repeatAction)
+        }
+        let cancelAction = UIAlertAction(title: "alert.ok".localized, style: .cancel)
+        alert.addAction(cancelAction)
         viewController?.present(alert, animated: true)
     }
 }

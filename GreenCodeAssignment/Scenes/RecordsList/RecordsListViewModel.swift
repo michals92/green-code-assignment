@@ -13,13 +13,14 @@ protocol RecordsListViewControllerInput: AnyObject {
 
 protocol RecordsListCoordinatorInput: AnyObject {
     func showResultForm()
-    func showAlert(title: String, message: String, repeatHandler: @escaping () -> Void)
+    func showAlert(title: String, message: String, repeatHandler: @escaping Action)
 }
 
 protocol RecordsListViewModelInput: AnyObject {
     func viewDidLoad()
     func showResultForm()
     func getResults(for type: RecordListType)
+    func getResultsForCurrentType()
 }
 
 final class RecordsListViewModel: RecordsListViewModelInput {
@@ -28,6 +29,7 @@ final class RecordsListViewModel: RecordsListViewModelInput {
 
     private let coordinator: RecordsListCoordinatorInput
     private weak var viewController: RecordsListViewControllerInput?
+    private var selectedType: RecordListType = .all
 
     init(coordinator: RecordsListCoordinatorInput, viewController: RecordsListViewControllerInput) {
         self.coordinator = coordinator
@@ -38,8 +40,13 @@ final class RecordsListViewModel: RecordsListViewModelInput {
         getResults(for: .all)
     }
 
+    func getResultsForCurrentType() {
+        getResults(for: selectedType)
+    }
+
     func getResults(for type: RecordListType) {
-        switch type {
+        selectedType = type
+        switch selectedType {
         case .remote, .all:
             var allResults: [RecordsListTableViewCellModel] = []
 

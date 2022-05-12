@@ -33,11 +33,13 @@ extension RecordsListCoordinator: RecordsListCoordinatorInput {
             fatalError("No controller to present on \(ResultFormCoordinator.self)")
         }
 
-        let resultFormCoordinator = ResultFormCoordinator(previousController: viewController)
+        let resultFormCoordinator = ResultFormCoordinator(previousController: viewController) {
+            viewController.viewModel?.getResultsForCurrentType()
+        }
         resultFormCoordinator.start()
     }
 
-    func showAlert(title: String, message: String, repeatHandler: @escaping () -> Void) {
+    func showAlert(title: String, message: String, repeatHandler: @escaping Action) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let repeatAction = UIAlertAction(title: "alert.repeat".localized, style: .default) { _ in
             repeatHandler()
