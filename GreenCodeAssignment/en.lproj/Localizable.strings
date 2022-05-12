@@ -26,3 +26,8 @@
 "ResultError.snapshot" = "Check your internet connection";
 "ResultError.parsing" = "Bad JSON structure";
 
+// ResultFormTableViewCell
+"ResultFormTableViewCell.hourLabel" = "h";
+"ResultFormTableViewCell.minuteLabel" = "m";
+"ResultFormTableViewCell.secondLabel" = "s";
+"ResultFormTableViewCell.textFieldPlaceholder" = "Enter ";
