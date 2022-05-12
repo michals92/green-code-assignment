@@ -13,6 +13,7 @@
 		71833B6B282BCF1000D11CC7 /* SportResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6A282BCF1000D11CC7 /* SportResultType.swift */; };
 		71833B6D282BD1A300D11CC7 /* RecordListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6C282BD1A300D11CC7 /* RecordListType.swift */; };
 		71833B6F282BD58300D11CC7 /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */; };
+		71833B71282C761C00D11CC7 /* ResultFormTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */; };
 		71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */; };
 		71BAF4FF282BAB280022C8A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71BAF501282BAB280022C8A2 /* Localizable.strings */; };
 		71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */; };
@@ -50,6 +51,7 @@
 		71833B6A282BCF1000D11CC7 /* SportResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResultType.swift; sourceTree = "<group>"; };
 		71833B6C282BD1A300D11CC7 /* RecordListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListType.swift; sourceTree = "<group>"; };
 		71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
+		71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormTableViewCellModel.swift; sourceTree = "<group>"; };
 		71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		71BAF500282BAB280022C8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormDataSource.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				71BAF505282BAEC40022C8A2 /* ResultFormTableViewCell.swift */,
+				71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */,
 				71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */,
 				71BF66B9282A739400CDF39E /* RecordsListTableViewCell.swift in Sources */,
+				71833B71282C761C00D11CC7 /* ResultFormTableViewCellModel.swift in Sources */,
 				71BF66B0282A70F200CDF39E /* ResultFormCoordinator.swift in Sources */,
 				71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */,
 				71BF66B2282A713800CDF39E /* ResultFormViewController.swift in Sources */,

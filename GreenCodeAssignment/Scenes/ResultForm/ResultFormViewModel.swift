@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ResultFormViewControllerInput: AnyObject {
-
+    func reloadData(cellModels: [ResultFormTableViewCellModel])
 }
 
 protocol ResultFormCoordinatorInput: AnyObject {
@@ -29,13 +29,23 @@ final class ResultFormViewModel: ResultFormViewModelInput {
     private let coordinator: ResultFormCoordinatorInput
     private weak var viewController: ResultFormViewControllerInput?
 
+    private var cellModels: [ResultFormTableViewCellModel] = []
+
     init(coordinator: ResultFormCoordinatorInput, viewController: ResultFormViewControllerInput) {
         self.coordinator = coordinator
         self.viewController = viewController
     }
 
     func viewDidLoad() {
+        let array = [
+            FormItem(name: "name", type: .text("")),
+            FormItem(name: "place", type: .text("")),
+            FormItem(name: "duration", type: .duration(0)),
+            FormItem(name: "type", type: .type(.local))
+        ]
 
+        cellModels = array.map { ResultFormTableViewCellModel(formItem: $0) }
+        viewController?.reloadData(cellModels: cellModels)
     }
 
     func cancel() {
@@ -43,25 +53,46 @@ final class ResultFormViewModel: ResultFormViewModelInput {
     }
 
     func confirm() {
-        let sportResult = SportResult(name: "Běh", place: "Brno", duration: 20, type: .remote)
+        var dictionary: [String: Any] = [:]
 
-        switch sportResult.type {
-        case .remote:
-            remoteResultService.addResult(sportResult) { [weak self] result in
-                switch result {
-                case .success:
-                    self?.coordinator.stop()
-                case .failure(let error):
-                    self?.coordinator.showAlert(
-                        title: "error.title".localized,
-                        message: error.description,
-                        repeatHandler: { self?.confirm() }
-                    )
-                }
+        for cellModel in cellModels {
+            let type = cellModel.formItem.type
+            let name = cellModel.formItem.name
+            switch type {
+            case .text(let string):
+                dictionary[name] = string
+            case .type(let sportResultType):
+                dictionary[name] = sportResultType.rawValue
+            case .duration(let double):
+                dictionary[name] = double
             }
-        case .local:
-            localResultService.addResult(sportResult)
-            coordinator.stop()
+        }
+
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: dictionary)
+            let sportResult = try JSONDecoder().decode(SportResult.self, from: jsonData)
+
+            switch sportResult.type {
+            case .remote:
+                remoteResultService.addResult(sportResult) { [weak self] result in
+                    switch result {
+                    case .success:
+                        self?.coordinator.stop()
+                    case .failure(let error):
+                        self?.coordinator.showAlert(
+                            title: "error.title".localized,
+                            message: error.description,
+                            repeatHandler: { self?.confirm() }
+                        )
+                    }
+                }
+            case .local:
+                localResultService.addResult(sportResult)
+                coordinator.stop()
+            }
+        } catch {
+            // TODO: show error
+            print("error")
         }
     }
 }

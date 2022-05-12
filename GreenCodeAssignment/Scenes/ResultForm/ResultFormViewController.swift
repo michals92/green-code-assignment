@@ -23,6 +23,7 @@ class ResultFormViewController: UIViewController {
         registerKeyboardNotifications()
 
         title = "ResultForm.title".localized
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         tableView.register(ResultFormTableViewCell.self, forCellReuseIdentifier: String(describing: ResultFormTableViewCell.self))
         tableView.dataSource = dataSource
@@ -44,6 +45,7 @@ class ResultFormViewController: UIViewController {
 
     func setLayout() {
         view.backgroundColor = .systemBackground
+        tableView.separatorStyle = .none
 
         applyButton.setTitle("ResultForm.applyButton".localized, for: .normal)
         applyButton.setTitleColor(.systemGray, for: .normal)
@@ -94,5 +96,8 @@ class ResultFormViewController: UIViewController {
 }
 
 extension ResultFormViewController: ResultFormViewControllerInput {
-    
+    func reloadData(cellModels: [ResultFormTableViewCellModel]) {
+        dataSource.cellModels = cellModels
+        tableView.reloadData()
+    }
 }

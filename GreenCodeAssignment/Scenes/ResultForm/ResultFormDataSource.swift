@@ -8,10 +8,10 @@
 import UIKit
 
 final class ResultFormTableViewDataSource: NSObject, UITableViewDataSource {
-    let items = ["name", "place", "duration", "storage"]
+    var cellModels: [ResultFormTableViewCellModel] = []
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
+        cellModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -19,7 +19,7 @@ final class ResultFormTableViewDataSource: NSObject, UITableViewDataSource {
             fatalError("unable to dequeue reusable cell with identifier \(String(describing: ResultFormTableViewCell.self))")
         }
 
-        cell.configure(placeholderText: items[indexPath.row])
+        cell.configure(cellModel: cellModels[indexPath.row])
         return cell
     }
 }
