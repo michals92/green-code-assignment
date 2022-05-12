@@ -14,6 +14,8 @@
 		71833B6D282BD1A300D11CC7 /* RecordListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6C282BD1A300D11CC7 /* RecordListType.swift */; };
 		71833B6F282BD58300D11CC7 /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */; };
 		71833B71282C761C00D11CC7 /* ResultFormTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */; };
+		71833B75282D363100D11CC7 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B74282D363100D11CC7 /* UITextField+Extensions.swift */; };
+		71833B77282D3E6800D11CC7 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B76282D3E6800D11CC7 /* TimeInterval+Extensions.swift */; };
 		71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */; };
 		71BAF4FF282BAB280022C8A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71BAF501282BAB280022C8A2 /* Localizable.strings */; };
 		71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */; };
@@ -52,6 +54,8 @@
 		71833B6C282BD1A300D11CC7 /* RecordListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListType.swift; sourceTree = "<group>"; };
 		71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
 		71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormTableViewCellModel.swift; sourceTree = "<group>"; };
+		71833B74282D363100D11CC7 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		71833B76282D3E6800D11CC7 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		71BAF500282BAB280022C8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormDataSource.swift; sourceTree = "<group>"; };
@@ -219,7 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				71BF66BD282A8BAA00CDF39E /* UserDefaults+Extensions.swift */,
+				71833B74282D363100D11CC7 /* UITextField+Extensions.swift */,
 				71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */,
+				71833B76282D3E6800D11CC7 /* TimeInterval+Extensions.swift */,
 				71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */,
 				71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */,
 			);
@@ -370,6 +376,7 @@
 				71BF6693282A5E5600CDF39E /* Coordinator.swift in Sources */,
 				71833B6B282BCF1000D11CC7 /* SportResultType.swift in Sources */,
 				71BF66B4282A714200CDF39E /* ResultFormViewModel.swift in Sources */,
+				71833B77282D3E6800D11CC7 /* TimeInterval+Extensions.swift in Sources */,
 				71BF6690282A5DC200CDF39E /* AppCoordinator.swift in Sources */,
 				71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */,
 				71BAF506282BAEC40022C8A2 /* ResultFormTableViewCell.swift in Sources */,
@@ -388,6 +395,7 @@
 				71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */,
 				71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */,
 				71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */,
+				71833B75282D363100D11CC7 /* UITextField+Extensions.swift in Sources */,
 				71833B6F282BD58300D11CC7 /* UISegmentedControl+Extensions.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
 				71BF66A2282A642300CDF39E /* ResultService.swift in Sources */,

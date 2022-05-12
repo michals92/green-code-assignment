@@ -59,12 +59,12 @@ final class ResultFormViewModel: ResultFormViewModelInput {
             let type = cellModel.formItem.type
             let name = cellModel.formItem.name
             switch type {
-            case .text(let string):
-                dictionary[name] = string
+            case .text(let value):
+                dictionary[name] = value
             case .type(let sportResultType):
                 dictionary[name] = sportResultType.rawValue
-            case .duration(let double):
-                dictionary[name] = double
+            case .duration(let value):
+                dictionary[name] = value
             }
         }
 

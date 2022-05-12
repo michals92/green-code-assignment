@@ -9,8 +9,6 @@ import UIKit
 
 class ResultFormViewController: UIViewController {
     private let tableView = UITableView()
-    private let applyButton = UIButton()
-    private var stackView: UIStackView!
 
     var viewModel: ResultFormViewModelInput?
     let dataSource = ResultFormTableViewDataSource()
@@ -23,13 +21,13 @@ class ResultFormViewController: UIViewController {
         registerKeyboardNotifications()
 
         title = "ResultForm.title".localized
-        navigationController?.navigationBar.prefersLargeTitles = true
 
         tableView.register(ResultFormTableViewCell.self, forCellReuseIdentifier: String(describing: ResultFormTableViewCell.self))
         tableView.dataSource = dataSource
         tableView.allowsSelection = false
+        tableView.separatorStyle = .none
 
-        bottomConstraint = stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        bottomConstraint = tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         bottomConstraint?.isActive = true
     }
 
@@ -45,28 +43,14 @@ class ResultFormViewController: UIViewController {
 
     func setLayout() {
         view.backgroundColor = .systemBackground
-        tableView.separatorStyle = .none
 
-        applyButton.setTitle("ResultForm.applyButton".localized, for: .normal)
-        applyButton.setTitleColor(.systemGray, for: .normal)
-
-        stackView = UIStackView(arrangedSubviews: [tableView, applyButton])
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.alignment = UIStackView.Alignment.center
-        stackView.spacing = 5
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-
-        view.addSubview(stackView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
-            applyButton.heightAnchor.constraint(equalToConstant: 50),
-            applyButton.widthAnchor.constraint(equalTo: stackView.widthAnchor),
-            tableView.widthAnchor.constraint(equalTo: stackView.widthAnchor),
-
-            stackView.topAnchor.constraint(equalTo: view.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
 
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonClicked))

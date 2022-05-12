@@ -21,10 +21,24 @@ struct FormItem {
 final class ResultFormTableViewCellModel {
     var formItem: FormItem
     var textFieldHandler: ((String) -> Void)?
+    var durationFieldHandler: ((Double) -> Void)?
 
     init(formItem: FormItem) {
         self.formItem = formItem
-        self.textFieldHandler = { value in self.setLatestValue(value) }
+
+        if case .duration = formItem.type {
+            self.durationFieldHandler = { value in self.setLatestValue(value) }
+        } else {
+            self.textFieldHandler = { value in self.setLatestValue(value) }
+        }
+    }
+
+    func setLatestValue(_ value: Double) {
+        if case .duration = formItem.type {
+            formItem = FormItem(name: formItem.name, type: .duration(value))
+        } else {
+            print("setLatestValue not implemented for \(formItem.name)!")
+        }
     }
 
     func setLatestValue(_ value: String) {
@@ -33,8 +47,8 @@ final class ResultFormTableViewCellModel {
             formItem = FormItem(name: formItem.name, type: .text(value))
         case .type:
             formItem = FormItem(name: formItem.name, type: .type(SportResultType(rawValue: value) ?? .local))
-        case .duration:
-            formItem = FormItem(name: formItem.name, type: .duration(Double(value) ?? 0))
+        default:
+            print("setLatestValue not implemented for \(formItem.name)!")
         }
     }
 }
