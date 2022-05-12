@@ -8,17 +8,31 @@
 import Foundation
 
 @propertyWrapper
-struct UserDefault<Value> {
+struct UserDefault<T: Codable> {
     let key: String
-    let defaultValue: Value
+    let defaultValue: T
     var container: UserDefaults = .standard
 
-    var wrappedValue: Value {
+    init(key: String, defaultValue: T) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
+
+    var wrappedValue: T {
         get {
-            return container.object(forKey: key) as? Value ?? defaultValue
+
+            if let data = container.object(forKey: key) as? Data,
+               let user = try? JSONDecoder().decode(T.self, from: data) {
+                return user
+
+            }
+
+            return defaultValue
         }
         set {
-            container.set(newValue, forKey: key)
+            if let encoded = try? JSONEncoder().encode(newValue) {
+                container.set(encoded, forKey: key)
+            }
         }
     }
 }
