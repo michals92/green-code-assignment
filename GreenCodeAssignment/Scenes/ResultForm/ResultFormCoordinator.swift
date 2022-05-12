@@ -30,7 +30,9 @@ final class ResultFormCoordinator: Coordinator {
     func stop() {
         previousController.dismiss(animated: true)
     }
+}
 
+extension ResultFormCoordinator: ResultFormCoordinatorInput {
     func showAlert(title: String, message: String, repeatHandler: @escaping () -> Void) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let repeatAction = UIAlertAction(title: "alert.repeat".localized, style: .default) { _ in
@@ -42,8 +44,4 @@ final class ResultFormCoordinator: Coordinator {
 
         viewController?.present(alert, animated: true)
     }
-}
-
-extension ResultFormCoordinator: ResultFormCoordinatorInput {
-
 }

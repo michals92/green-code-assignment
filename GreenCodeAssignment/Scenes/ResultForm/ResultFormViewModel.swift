@@ -91,8 +91,7 @@ final class ResultFormViewModel: ResultFormViewModelInput {
                 coordinator.stop()
             }
         } catch {
-            // TODO: show error
-            print("error")
+            coordinator.showAlert(title: "error.title".localized, message: "", repeatHandler: confirm)
         }
     }
 }
