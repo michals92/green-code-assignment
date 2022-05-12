@@ -50,11 +50,6 @@ class ResultFormTableViewCell: UITableViewCell {
         }
     }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        textField?.addUnderLine()
-    }
-
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayout()
