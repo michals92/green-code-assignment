@@ -36,7 +36,7 @@ class RecordsListTableViewCell: UITableViewCell {
         nameLabel.text = result.name
         placeLabel.text = result.place
         typeLabel.text = result.type.rawValue
-        typeLabel.textColor = result.type == .remote ? .systemGreen : .systemBlue
+        typeLabel.textColor = result.type == .remote ? .systemGreen : .systemOrange
     }
 
     private func setLayout() {

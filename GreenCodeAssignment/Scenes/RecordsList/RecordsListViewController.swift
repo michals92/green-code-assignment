@@ -66,7 +66,7 @@ class RecordsListViewController: UIViewController {
 
         segmentedControl.fixBackground()
         segmentedControl.backgroundColor = .systemBackground
-        segmentedControl.selectedSegmentTintColor = .systemGray3
+        segmentedControl.selectedSegmentTintColor = .systemGray.withAlphaComponent(0.2)
 
         segmentedControl.addTarget(self, action: #selector(recordTypeDidChange(_:)), for: .valueChanged)
     }

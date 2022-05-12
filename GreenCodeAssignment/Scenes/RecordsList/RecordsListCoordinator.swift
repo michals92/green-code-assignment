@@ -32,7 +32,7 @@ extension RecordsListCoordinator: RecordsListCoordinatorInput {
         guard let viewController = viewController else {
             fatalError("No controller to present on \(ResultFormCoordinator.self)")
         }
-        
+
         let resultFormCoordinator = ResultFormCoordinator(previousController: viewController)
         resultFormCoordinator.start()
     }

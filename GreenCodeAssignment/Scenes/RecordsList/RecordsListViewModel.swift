@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RecordsListViewControllerInput: AnyObject {
-    func reloadData(results: [SportResult])
+    func reloadData(results: [SportResult]) // TODO: cell model, not only model
 }
 
 protocol RecordsListCoordinatorInput: AnyObject {
