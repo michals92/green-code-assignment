@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RecordsListViewControllerInput: AnyObject {
-    func reloadData(results: [SportResult]) // TODO: cell model, not only model
+    func reloadData(cellModels: [RecordsListTableViewCellModel])
 }
 
 protocol RecordsListCoordinatorInput: AnyObject {
@@ -41,17 +41,17 @@ final class RecordsListViewModel: RecordsListViewModelInput {
     func getResults(for type: RecordListType) {
         switch type {
         case .remote, .all:
-            var allResults: [SportResult] = []
+            var allResults: [RecordsListTableViewCellModel] = []
 
             if case .all = type {
-                allResults = localResultService.getResults()
+                allResults = localResultService.getResults().map { RecordsListTableViewCellModel(sportResult: $0) }
             }
 
             remoteResultService.getResults { [weak self] result in
                 switch result {
                 case .success(let remoteResults):
-                    allResults.append(contentsOf: remoteResults)
-                    self?.viewController?.reloadData(results: allResults)
+                    allResults.append(contentsOf: remoteResults.map { RecordsListTableViewCellModel(sportResult: $0) })
+                    self?.viewController?.reloadData(cellModels: allResults)
                 case .failure(let error):
                     self?.coordinator.showAlert(
                         title: "error.title".localized,
@@ -61,7 +61,7 @@ final class RecordsListViewModel: RecordsListViewModelInput {
                 }
             }
         case .local:
-            viewController?.reloadData(results: localResultService.getResults())
+            viewController?.reloadData(cellModels: localResultService.getResults().map { RecordsListTableViewCellModel(sportResult: $0) })
         }
     }
 

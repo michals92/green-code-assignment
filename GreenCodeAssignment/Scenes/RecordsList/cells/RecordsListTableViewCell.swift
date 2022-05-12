@@ -35,7 +35,8 @@ class RecordsListTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(result: SportResult) {
+    func configure(cellModel: RecordsListTableViewCellModel) {
+        let result = cellModel.sportResult
         nameLabel.text = result.name
         placeLabel.text = result.place
         typeLabel.text = result.type.rawValue

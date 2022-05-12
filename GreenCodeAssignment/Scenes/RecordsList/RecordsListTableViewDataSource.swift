@@ -8,10 +8,10 @@
 import UIKit
 
 final class RecordListTableViewDataSource: NSObject, UITableViewDataSource {
-    var results: [SportResult] = []
+    var cellModels: [RecordsListTableViewCellModel] = []
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        results.count
+        cellModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -19,7 +19,7 @@ final class RecordListTableViewDataSource: NSObject, UITableViewDataSource {
             fatalError("unable to dequeue reusable cell with identifier \(String(describing: RecordsListTableViewCell.self))")
         }
 
-        cell.configure(result: results[indexPath.row])
+        cell.configure(cellModel: cellModels[indexPath.row])
         return cell
     }
 }

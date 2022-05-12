@@ -71,11 +71,6 @@ class RecordsListViewController: UIViewController {
         segmentedControl.addTarget(self, action: #selector(recordTypeDidChange(_:)), for: .valueChanged)
     }
 
-    func reloadData(results: [SportResult]) {
-        dataSource.results = results
-        tableView.reloadData()
-    }
-
     @objc func addButtonClicked() {
         viewModel?.showResultForm()
     }
@@ -87,5 +82,8 @@ class RecordsListViewController: UIViewController {
 }
 
 extension RecordsListViewController: RecordsListViewControllerInput {
-
+    func reloadData(cellModels: [RecordsListTableViewCellModel]) {
+        dataSource.cellModels = cellModels
+        tableView.reloadData()
+    }
 }
