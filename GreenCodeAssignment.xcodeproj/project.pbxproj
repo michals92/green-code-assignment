@@ -133,10 +133,10 @@
 			children = (
 				71BF667B282A5D1E00CDF39E /* AppDelegate.swift */,
 				71BF668F282A5DC200CDF39E /* AppCoordinator.swift */,
+				71BF66A3282A64BF00CDF39E /* InjectedValues.swift */,
 				71BF66AA282A6B9E00CDF39E /* Models */,
 				71BF6694282A5E7800CDF39E /* Scenes */,
 				71BF66A9282A675000CDF39E /* Services */,
-				71BF66A3282A64BF00CDF39E /* InjectedValues.swift */,
 				71BF66C4282A9A7900CDF39E /* Extensions */,
 				71BF6691282A5E3F00CDF39E /* Architecture */,
 				71BF6684282A5D2100CDF39E /* Assets.xcassets */,
