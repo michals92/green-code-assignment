@@ -9,7 +9,7 @@ It is quite simple app, that consists of only two screens. List of results and f
 ###  List of results
 List of results have to be easily readable for the user. There is add button in the top right corner, as in Apple guidelines. Segmented control on top filters records by storage type. Cell displays all the required info. 
 
-    Additional:
+   Additional:
     - info with add record button, if screen is empty
     - loading and reloading ability for tableView
     - automatically sorts records, new ones are on top
