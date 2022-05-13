@@ -126,7 +126,8 @@ class ResultFormTableViewCell: UITableViewCell {
         ])
     }
 
-    @objc func textFieldDidChange() {
+    @objc
+    private func textFieldDidChange() {
         if let textField = textField {
             textFieldHandler?(textField.text ?? "")
         }

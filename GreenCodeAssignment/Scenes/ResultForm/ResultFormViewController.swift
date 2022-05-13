@@ -11,9 +11,9 @@ class ResultFormViewController: UIViewController {
     private let tableView = UITableView()
 
     var viewModel: ResultFormViewModelInput?
-    let dataSource = ResultFormTableViewDataSource()
+    private let dataSource = ResultFormTableViewDataSource()
 
-    var bottomConstraint: NSLayoutConstraint?
+    private var bottomConstraint: NSLayoutConstraint?
 
     override func loadView() {
         super.loadView()
@@ -37,12 +37,12 @@ class ResultFormViewController: UIViewController {
         viewModel?.viewDidLoad()
     }
 
-    func registerKeyboardNotifications() {
+    private func registerKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    func setLayout() {
+    private func setLayout() {
         view.backgroundColor = .systemBackground
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -60,22 +60,26 @@ class ResultFormViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = confirmBarButtonItem
     }
 
-    @objc func keyboardWillShow(sender: NSNotification) {
+    @objc
+    func keyboardWillShow(sender: NSNotification) {
         if let info = sender.userInfo, let keyboardFrameEndUserInfoKey = info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardSize = keyboardFrameEndUserInfoKey.cgRectValue.height
             bottomConstraint?.constant = -keyboardSize
         }
     }
 
-    @objc func keyboardWillHide(sender: NSNotification) {
+    @objc
+    func keyboardWillHide(sender: NSNotification) {
         bottomConstraint?.constant = 0
     }
 
-    @objc func cancelButtonClicked() {
+    @objc
+    func cancelButtonClicked() {
         viewModel?.cancel()
     }
 
-    @objc func confirmButtonClicked() {
+    @objc
+    private func confirmButtonClicked() {
         viewModel?.confirm()
     }
 }
