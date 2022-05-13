@@ -12,4 +12,5 @@ struct SportResult: Codable {
     let place: String
     let duration: Double
     let type: SportResultType
+    let date: Date
 }

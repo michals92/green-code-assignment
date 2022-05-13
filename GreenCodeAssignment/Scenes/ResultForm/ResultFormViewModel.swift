@@ -83,9 +83,16 @@ final class ResultFormViewModel: ResultFormViewModelInput {
             return
         }
 
+        let dateFormatter = ISO8601DateFormatter()
+        values["date"] = dateFormatter.string(from: Date())
+
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: values)
-            let sportResult = try JSONDecoder().decode(SportResult.self, from: jsonData)
+
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+
+            let sportResult = try decoder.decode(SportResult.self, from: jsonData)
 
             switch sportResult.type {
             case .remote:

@@ -23,7 +23,11 @@ struct FirebaseResultService: ResultService {
             do {
                 let results = try snapshot.documents.compactMap { (document) -> SportResult in
                     let jsonData = try JSONSerialization.data(withJSONObject: document.data())
-                    let result = try JSONDecoder().decode(SportResult.self, from: jsonData)
+
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .iso8601
+                    
+                    let result = try decoder.decode(SportResult.self, from: jsonData)
                     return result
                 }
                 DispatchQueue.main.async {

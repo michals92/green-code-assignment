@@ -48,17 +48,22 @@ final class RecordsListViewModel: RecordsListViewModelInput {
         selectedType = type
         switch selectedType {
         case .remote, .all:
-            var allResults: [RecordsListTableViewCellModel] = []
+            var allResults: [SportResult] = []
 
             if case .all = type {
-                allResults = localResultService.getResults().map { RecordsListTableViewCellModel(sportResult: $0) }
+                allResults = localResultService.getResults()
             }
 
             remoteResultService.getResults { [weak self] result in
                 switch result {
                 case .success(let remoteResults):
-                    allResults.append(contentsOf: remoteResults.map { RecordsListTableViewCellModel(sportResult: $0) })
-                    self?.viewController?.reloadData(cellModels: allResults)
+                    allResults.append(contentsOf: remoteResults)
+
+                    let sortedResults = allResults.sorted {
+                        $0.date > $1.date
+                    }
+                    
+                    self?.viewController?.reloadData(cellModels: sortedResults.map { RecordsListTableViewCellModel(sportResult: $0) })
                 case .failure(let error):
                     self?.coordinator.showAlert(
                         title: "error.title".localized,
@@ -68,7 +73,10 @@ final class RecordsListViewModel: RecordsListViewModelInput {
                 }
             }
         case .local:
-            viewController?.reloadData(cellModels: localResultService.getResults().map { RecordsListTableViewCellModel(sportResult: $0) })
+            let sortedResults = localResultService.getResults().sorted {
+                $0.date > $1.date
+            }
+            viewController?.reloadData(cellModels: sortedResults.map { RecordsListTableViewCellModel(sportResult: $0) })
         }
     }
 

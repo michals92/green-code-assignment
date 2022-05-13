@@ -21,8 +21,8 @@
 \
 Application should contain 2 parts:\
 \pard\tx360\tx720\pardeftab720\li720\fi-720\sl276\slmult1\partightenfactor0
-\ls1\ilvl0\cf2 		Form to enter the sport performance result (e.g. duration and distance for running) (see \cf3 \ul Sport results form requirements\cf2 \ulnone )\
-		Listing of results (see \cf3 \ul Listing requirements\cf2 \ulnone )\
+\ls1\ilvl0\cf2 		Form to enter the sport performance result (e.g. duration and distance for running) (see \cf3 \ul \ulc3 Sport results form requirements\cf2 \ulnone )\
+		Listing of results (see \cf3 \ul \ulc3 Listing requirements\cf2 \ulnone )\
 \pard\pardeftab720\sl276\slmult1\partightenfactor0
 \cf2 \
 You should design the user\'92s flow (navigation) in application to provide the user experience as good as possible. Implement navigation flow and provide us a description of flow and your decisions.\
@@ -64,4 +64,29 @@ Application should work in
 \f0\b\fs36 \cf2 Additional iOS requirements\
 \pard\tx360\tx720\pardeftab720\li720\fi-720\sl276\slmult1\partightenfactor0
 \ls4\ilvl0
-\f1\b0\fs22 \cf2 		Do not use Storyboards or XIBs}
+\f1\b0\fs22 \cf2 {\listtext	\uc0\u8226 	}Do not use Storyboards or XIBs\
+\pard\tx560\pardeftab720\sl276\slmult1\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\sa60\partightenfactor0
+
+\f0\b\fs36 \cf2 Result
+\f1\b0\fs22 \
+\pard\tx560\pardeftab720\sl276\slmult1\partightenfactor0
+\cf2 Application\
+	Backend is hosted on Firebase Firestore and each device has its own records based on UUID of the device\
+	Simple UserDefaults local storage with property wrapper around model\
+	UI/UX is as simple as possible\
+	MVVM-C architecture is implemented\
+	Dependency injection for services\
+\
+\pard\pardeftab720\sl280\slmult1\partightenfactor0
+
+\f3\i\b\fs28 \cf4 Additional features\
+	
+\f1\i0\b0\fs22 \cf2 Delete each record \
+	dark mode\
+\pard\tx560\pardeftab720\sl276\slmult1\partightenfactor0
+\cf2 \
+\
+}
