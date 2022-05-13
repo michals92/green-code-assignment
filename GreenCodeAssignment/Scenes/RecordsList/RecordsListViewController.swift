@@ -10,30 +10,33 @@ import UIKit
 class RecordsListViewController: UIViewController {
     private let tableView = UITableView()
     private let segmentedControl = UISegmentedControl()
+    private let refreshControl = UIRefreshControl()
+    private let emptyTitleLabel = UILabel()
+    private let emptyButton = UIButton()
+    private var emptyStackView: UIStackView?
 
     var viewModel: RecordsListViewModelInput?
-    var dataSource: RecordsListTableViewDataSource?
+
+    private var dataSource: RecordsListTableViewDataSource?
 
     override func loadView() {
         super.loadView()
         setLayout()
+        setEmptyLayout()
+        setAppearance()
         setSegmentedControlItems()
+        
         title = "RecordsList.title".localized
 
         tableView.register(RecordsListTableViewCell.self, forCellReuseIdentifier: String(describing: RecordsListTableViewCell.self))
-        tableView.register(EmptyTableViewCell.self, forCellReuseIdentifier: String(describing: EmptyTableViewCell.self))
 
-        let emptyTableViewCellModel = EmptyTableViewCellModel(
-            title: "RecordsListTableViewDataSource.title".localized,
-            buttonTitle: "RecordsListTableViewDataSource.buttonTitle".localized) { [weak self] in
-                self?.viewModel?.showResultForm()
-            }
-
-        let dataSource = RecordsListTableViewDataSource(emptyCellModel: emptyTableViewCellModel)
+        let dataSource = RecordsListTableViewDataSource()
         self.dataSource = dataSource
         tableView.dataSource = dataSource
-        tableView.delegate = dataSource
         tableView.allowsSelection = false
+
+        tableView.refreshControl = refreshControl
+        tableView.refreshControl?.addTarget(self, action: #selector(refreshed), for: .valueChanged)
     }
 
     override func viewDidLoad() {
@@ -41,7 +44,7 @@ class RecordsListViewController: UIViewController {
         viewModel?.viewDidLoad()
     }
 
-    func setLayout() {
+    private func setLayout() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
 
@@ -68,7 +71,44 @@ class RecordsListViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = addBarButtonItem
     }
 
-    func setSegmentedControlItems() {
+    private func setEmptyLayout() {
+        let emptyStackView = UIStackView(arrangedSubviews: [emptyTitleLabel, emptyButton])
+        emptyStackView.axis  = .vertical
+        emptyStackView.distribution  = .fill
+        emptyStackView.alignment = UIStackView.Alignment.center
+        emptyStackView.spacing = 10
+        emptyStackView.translatesAutoresizingMaskIntoConstraints = false
+        emptyStackView.isHidden = true
+
+        self.emptyStackView = emptyStackView
+        view.addSubview(emptyStackView)
+
+        NSLayoutConstraint.activate([
+            emptyStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            emptyStackView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            emptyStackView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
+        ])
+
+    }
+
+    private func setAppearance() {
+        emptyTitleLabel.text = "RecordsListTableViewDataSource.title".localized
+        emptyButton.setTitle("RecordsListTableViewDataSource.buttonTitle".localized, for: .normal)
+
+        emptyTitleLabel.font = .systemFont(ofSize: 14, weight: .light)
+        emptyTitleLabel.numberOfLines = 0
+        emptyTitleLabel.textAlignment = .center
+
+        emptyButton.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
+        emptyButton.backgroundColor = .systemBlue
+        emptyButton.titleLabel?.contentMode = .scaleAspectFit
+
+        emptyButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        emptyButton.layer.cornerRadius = 4
+        emptyButton.addTarget(self, action: #selector(emptyButtonAction), for: .touchUpInside)
+    }
+
+    private func setSegmentedControlItems() {
         let items = RecordListType.allCases
         for (index, item) in items.enumerated() {
             segmentedControl.insertSegment(withTitle: item.title(), at: index, animated: false)
@@ -82,18 +122,43 @@ class RecordsListViewController: UIViewController {
         segmentedControl.addTarget(self, action: #selector(recordTypeDidChange(_:)), for: .valueChanged)
     }
 
-    @objc func addButtonClicked() {
+    @objc
+    private func addButtonClicked() {
         viewModel?.showResultForm()
     }
 
-    @objc func recordTypeDidChange(_ segmentedControl: UISegmentedControl) {
+    @objc
+    private func refreshed() {
+        viewModel?.getResultsForCurrentType()
+    }
+
+    @objc
+    private func recordTypeDidChange(_ segmentedControl: UISegmentedControl) {
         let index = segmentedControl.selectedSegmentIndex
         viewModel?.getResults(for: RecordListType(rawValue: index) ?? .all)
+    }
+
+    @objc
+    private func emptyButtonAction() {
+        viewModel?.showResultForm()
     }
 }
 
 extension RecordsListViewController: RecordsListViewControllerInput {
+    func startLoading() {
+        if !refreshControl.isRefreshing {
+            refreshControl.beginRefreshing()
+        }
+    }
+
+    func stopLoading() {
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
+    }
+
     func reloadData(cellModels: [RecordsListTableViewCellModel], type: RecordListType) {
+        emptyStackView?.isHidden = !cellModels.isEmpty
         dataSource?.cellModels = cellModels
         dataSource?.type = type
         tableView.reloadData()

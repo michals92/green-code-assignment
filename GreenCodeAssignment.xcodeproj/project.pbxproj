@@ -16,9 +16,7 @@
 		71833B71282C761C00D11CC7 /* ResultFormTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */; };
 		71833B77282D3E6800D11CC7 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B76282D3E6800D11CC7 /* TimeInterval+Extensions.swift */; };
 		71833B99282DA78E00D11CC7 /* RecordsListTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B98282DA78E00D11CC7 /* RecordsListTableViewCellModel.swift */; };
-		71833B9B282DAD3800D11CC7 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B9A282DAD3800D11CC7 /* EmptyTableViewCell.swift */; };
 		71833BC1282E3D3E00D11CC7 /* UIViewController+Extensions).swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833BC0282E3D3D00D11CC7 /* UIViewController+Extensions).swift */; };
-		71833BC3282E431300D11CC7 /* EmptyTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833BC2282E431300D11CC7 /* EmptyTableViewCellModel.swift */; };
 		71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */; };
 		71BAF4FF282BAB280022C8A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71BAF501282BAB280022C8A2 /* Localizable.strings */; };
 		71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */; };
@@ -59,9 +57,7 @@
 		71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormTableViewCellModel.swift; sourceTree = "<group>"; };
 		71833B76282D3E6800D11CC7 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		71833B98282DA78E00D11CC7 /* RecordsListTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewCellModel.swift; sourceTree = "<group>"; };
-		71833B9A282DAD3800D11CC7 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		71833BC0282E3D3D00D11CC7 /* UIViewController+Extensions).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions).swift"; sourceTree = "<group>"; };
-		71833BC2282E431300D11CC7 /* EmptyTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCellModel.swift; sourceTree = "<group>"; };
 		71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		71BAF500282BAB280022C8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormDataSource.swift; sourceTree = "<group>"; };
@@ -222,8 +218,6 @@
 			children = (
 				71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */,
 				71833B98282DA78E00D11CC7 /* RecordsListTableViewCellModel.swift */,
-				71833B9A282DAD3800D11CC7 /* EmptyTableViewCell.swift */,
-				71833BC2282E431300D11CC7 /* EmptyTableViewCellModel.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -405,11 +399,9 @@
 				71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */,
 				71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */,
 				71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */,
-				71833B9B282DAD3800D11CC7 /* EmptyTableViewCell.swift in Sources */,
 				71833B6F282BD58300D11CC7 /* UISegmentedControl+Extensions.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
 				71BF66A2282A642300CDF39E /* ResultService.swift in Sources */,
-				71833BC3282E431300D11CC7 /* EmptyTableViewCellModel.swift in Sources */,
 				71BF6699282A5ED400CDF39E /* RecordsListCoordinator.swift in Sources */,
 				71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */,
 				71833B6D282BD1A300D11CC7 /* RecordListType.swift in Sources */,

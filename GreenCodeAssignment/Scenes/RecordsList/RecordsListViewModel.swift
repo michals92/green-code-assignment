@@ -9,6 +9,8 @@ import Foundation
 
 protocol RecordsListViewControllerInput: AnyObject {
     func reloadData(cellModels: [RecordsListTableViewCellModel], type: RecordListType)
+    func startLoading()
+    func stopLoading()
 }
 
 protocol RecordsListCoordinatorInput: AnyObject {
@@ -45,6 +47,7 @@ final class RecordsListViewModel: RecordsListViewModelInput {
     }
 
     func getResults(for type: RecordListType) {
+        viewController?.startLoading()
         selectedType = type
         switch selectedType {
         case .remote, .all:
@@ -55,6 +58,7 @@ final class RecordsListViewModel: RecordsListViewModelInput {
             }
 
             remoteResultService.getResults { [weak self] result in
+                self?.viewController?.stopLoading()
                 switch result {
                 case .success(let remoteResults):
                     allResults.append(contentsOf: remoteResults)
@@ -76,6 +80,7 @@ final class RecordsListViewModel: RecordsListViewModelInput {
             let sortedResults = localResultService.getResults().sorted {
                 $0.date > $1.date
             }
+            viewController?.stopLoading()
             viewController?.reloadData(cellModels: sortedResults.map { RecordsListTableViewCellModel(sportResult: $0) }, type: type)
         }
     }
