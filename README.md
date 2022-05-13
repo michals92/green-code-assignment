@@ -4,7 +4,7 @@ Record sport performance results and store them in local storage and remote stor
 
 ## Design process: 
 
-It is quite simple app, that consists of only two screens. List of results and form to enter new record. My goal was to create as simple app, as possible.
+It is quite a simple app that consists of only two screens. List of results and form to enter a new record. My goal was to create as simple app, as possible.
 
 ###  List of results
 List of results have to be easily readable for the user. There is add button in the top right corner, as in Apple guidelines. Segmented control on top filters records by storage type. Cell displays all the required info. 
@@ -15,7 +15,7 @@ Additional:
  - automatically sorts records, new ones are on top
 
 ### Add result form
-After tapping add button, add result form is modally presented. It has cancel and save buttons in navigation bar. User enters name, place (that could be improved by picking from map or by asking for users current location). Save button checks, if all the fields were filled, then saves result and reloads list.
+After tapping add button, add result form is modally presented. It has cancel and save buttons in the navigation bar. User enters name, place (that could be improved by picking from map or by asking for users current location). Save button checks, if all the fields were filled, then saves result and reloads list.
     
 
 ## Features:
