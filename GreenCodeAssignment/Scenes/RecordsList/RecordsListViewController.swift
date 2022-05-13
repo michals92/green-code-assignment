@@ -93,8 +93,9 @@ class RecordsListViewController: UIViewController {
 }
 
 extension RecordsListViewController: RecordsListViewControllerInput {
-    func reloadData(cellModels: [RecordsListTableViewCellModel]) {
+    func reloadData(cellModels: [RecordsListTableViewCellModel], type: RecordListType) {
         dataSource?.cellModels = cellModels
+        dataSource?.type = type
         tableView.reloadData()
     }
 }

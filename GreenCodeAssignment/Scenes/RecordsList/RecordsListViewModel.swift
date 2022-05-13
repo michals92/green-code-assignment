@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RecordsListViewControllerInput: AnyObject {
-    func reloadData(cellModels: [RecordsListTableViewCellModel])
+    func reloadData(cellModels: [RecordsListTableViewCellModel], type: RecordListType)
 }
 
 protocol RecordsListCoordinatorInput: AnyObject {
@@ -62,8 +62,8 @@ final class RecordsListViewModel: RecordsListViewModelInput {
                     let sortedResults = allResults.sorted {
                         $0.date > $1.date
                     }
-                    
-                    self?.viewController?.reloadData(cellModels: sortedResults.map { RecordsListTableViewCellModel(sportResult: $0) })
+
+                    self?.viewController?.reloadData(cellModels: sortedResults.map { RecordsListTableViewCellModel(sportResult: $0) }, type: type)
                 case .failure(let error):
                     self?.coordinator.showAlert(
                         title: "error.title".localized,
@@ -76,10 +76,9 @@ final class RecordsListViewModel: RecordsListViewModelInput {
             let sortedResults = localResultService.getResults().sorted {
                 $0.date > $1.date
             }
-            viewController?.reloadData(cellModels: sortedResults.map { RecordsListTableViewCellModel(sportResult: $0) })
+            viewController?.reloadData(cellModels: sortedResults.map { RecordsListTableViewCellModel(sportResult: $0) }, type: type)
         }
     }
-
 
     func showResultForm() {
         coordinator.showResultForm()

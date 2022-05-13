@@ -10,6 +10,7 @@ import UIKit
 final class RecordsListTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     var cellModels: [RecordsListTableViewCellModel] = []
     let emptyCellModel: EmptyTableViewCellModel?
+    var type: RecordListType = .all
 
     init(emptyCellModel: EmptyTableViewCellModel) {
         self.emptyCellModel = emptyCellModel
@@ -41,7 +42,7 @@ final class RecordsListTableViewDataSource: NSObject, UITableViewDataSource, UIT
             fatalError("unable to dequeue reusable cell with identifier \(String(describing: RecordsListTableViewCell.self))")
         }
 
-        cell.configure(cellModel: cellModels[indexPath.row])
+        cell.configure(cellModel: cellModels[indexPath.row], hideType: type != .all)
         return cell
     }
 

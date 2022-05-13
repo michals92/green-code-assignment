@@ -35,12 +35,13 @@ class RecordsListTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(cellModel: RecordsListTableViewCellModel) {
+    func configure(cellModel: RecordsListTableViewCellModel, hideType: Bool) {
         let result = cellModel.sportResult
         nameLabel.text = result.name
         placeLabel.text = result.place
         typeLabel.text = result.type.rawValue
         typeLabel.textColor = result.type == .remote ? .systemGreen : .systemOrange
+        typeLabel.isHidden = hideType
         durationLabel.text = result.duration.format(using: [.hour, .minute, .second])
     }
 
