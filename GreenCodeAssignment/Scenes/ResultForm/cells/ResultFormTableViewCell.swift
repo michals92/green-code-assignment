@@ -112,7 +112,7 @@ class ResultFormTableViewCell: UITableViewCell {
 
         stackView.axis = .vertical
         stackView.distribution = .fill
-        stackView.alignment = UIStackView.Alignment.fill
+        stackView.alignment = .fill
         stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
 

@@ -55,8 +55,9 @@ final class ResultFormViewModel: ResultFormViewModelInput {
     func checkMandatoryFields(items: [String: Any]) -> Bool {
         let name = items["name"] as? String ?? ""
         let place = items["place"] as? String ?? ""
+        let duration = items["duration"] as? Double ?? 0
 
-        if name.isEmpty || place.isEmpty {
+        if name.isEmpty || place.isEmpty || duration == 0 {
             return false
         }
         return true

@@ -34,6 +34,7 @@ class RecordsListViewController: UIViewController {
         self.dataSource = dataSource
         tableView.dataSource = dataSource
         tableView.allowsSelection = false
+        tableView.tableFooterView = UIView()
 
         tableView.refreshControl = refreshControl
         tableView.refreshControl?.addTarget(self, action: #selector(refreshed), for: .valueChanged)
@@ -51,7 +52,7 @@ class RecordsListViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [segmentedControl, tableView])
         stackView.axis = .vertical
         stackView.distribution = .fill
-        stackView.alignment = UIStackView.Alignment.center
+        stackView.alignment = .center
         stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -75,7 +76,7 @@ class RecordsListViewController: UIViewController {
         let emptyStackView = UIStackView(arrangedSubviews: [emptyTitleLabel, emptyButton])
         emptyStackView.axis  = .vertical
         emptyStackView.distribution  = .fill
-        emptyStackView.alignment = UIStackView.Alignment.center
+        emptyStackView.alignment = .center
         emptyStackView.spacing = 10
         emptyStackView.translatesAutoresizingMaskIntoConstraints = false
         emptyStackView.isHidden = true
