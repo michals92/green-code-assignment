@@ -9,10 +9,10 @@ It is quite simple app, that consists of only two screens. List of results and f
 ###  List of results
 List of results have to be easily readable for the user. There is add button in the top right corner, as in Apple guidelines. Segmented control on top filters records by storage type. Cell displays all the required info. 
 
-   Additional:
-    - info with add record button, if screen is empty
-    - loading and reloading ability for tableView
-    - automatically sorts records, new ones are on top
+Additional:
+ - info with add record button, if screen is empty
+ - loading and reloading ability for tableView
+ - automatically sorts records, new ones are on top
 
 ### Add result form
 After tapping add button, add result form is modally presented. It has cancel and save buttons in navigation bar. User enters name, place (that could be improved by picking from map or by asking for users current location). Save button checks, if all the fields were filled, then saves result and reloads list.
