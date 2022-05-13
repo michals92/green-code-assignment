@@ -33,6 +33,7 @@ class RecordsListViewController: UIViewController {
         self.dataSource = dataSource
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
+        tableView.allowsSelection = false
     }
 
     override func viewDidLoad() {

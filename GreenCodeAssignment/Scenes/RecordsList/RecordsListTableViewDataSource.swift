@@ -9,7 +9,7 @@ import UIKit
 
 final class RecordsListTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     var cellModels: [RecordsListTableViewCellModel] = []
-    let emptyCellModel: EmptyTableViewCellModel!
+    let emptyCellModel: EmptyTableViewCellModel?
 
     init(emptyCellModel: EmptyTableViewCellModel) {
         self.emptyCellModel = emptyCellModel
@@ -27,6 +27,10 @@ final class RecordsListTableViewDataSource: NSObject, UITableViewDataSource, UIT
         if cellModels.isEmpty {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EmptyTableViewCell.self), for: indexPath) as? EmptyTableViewCell else {
                 fatalError("unable to dequeue reusable cell with identifier \(String(describing: EmptyTableViewCell.self))")
+            }
+
+            guard let emptyCellModel = emptyCellModel else {
+                fatalError("datasource was initialized without empty cell model")
             }
 
             cell.configure(cellModel: emptyCellModel)

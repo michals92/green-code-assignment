@@ -8,7 +8,7 @@
 import Foundation
 
 final class RecordsListTableViewCellModel {
-    var sportResult: SportResult
+    let sportResult: SportResult
 
     init(sportResult: SportResult) {
         self.sportResult = sportResult

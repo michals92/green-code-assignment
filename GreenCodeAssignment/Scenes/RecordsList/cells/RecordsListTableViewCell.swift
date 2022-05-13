@@ -68,7 +68,7 @@ class RecordsListTableViewCell: UITableViewCell {
         ])
     }
 
-    func setAppearance() {
+    private func setAppearance() {
         nameLabel.font = .systemFont(ofSize: 18)
         nameLabel.numberOfLines = 0
 
