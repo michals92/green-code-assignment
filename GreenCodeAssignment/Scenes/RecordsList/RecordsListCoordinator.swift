@@ -28,5 +28,26 @@ final class RecordsListCoordinator: Coordinator {
 }
 
 extension RecordsListCoordinator: RecordsListCoordinatorInput {
-    
+    func showResultForm() {
+        guard let viewController = viewController else {
+            fatalError("No controller to present on \(ResultFormCoordinator.self)")
+        }
+
+        let resultFormCoordinator = ResultFormCoordinator(previousController: viewController) {
+            viewController.viewModel?.getResultsForCurrentType()
+        }
+        resultFormCoordinator.start()
+    }
+
+    func showAlert(title: String, message: String, repeatHandler: @escaping Action) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let repeatAction = UIAlertAction(title: "alert.repeat".localized, style: .default) { _ in
+            repeatHandler()
+        }
+        let cancelAction = UIAlertAction(title: "alert.cancel".localized, style: .cancel)
+        alert.addAction(repeatAction)
+        alert.addAction(cancelAction)
+
+        viewController?.present(alert, animated: true)
+    }
 }

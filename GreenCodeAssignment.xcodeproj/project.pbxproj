@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23DC807475F60BAC15777D0D /* Pods_GreenCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */; };
+		71833B67282BBEC900D11CC7 /* FirebaseResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B66282BBEC900D11CC7 /* FirebaseResultService.swift */; };
+		71833B69282BC1F000D11CC7 /* LocalResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B68282BC1F000D11CC7 /* LocalResultService.swift */; };
+		71833B6B282BCF1000D11CC7 /* SportResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6A282BCF1000D11CC7 /* SportResultType.swift */; };
+		71833B6D282BD1A300D11CC7 /* RecordListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6C282BD1A300D11CC7 /* RecordListType.swift */; };
+		71833B6F282BD58300D11CC7 /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */; };
+		71833B71282C761C00D11CC7 /* ResultFormTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */; };
+		71833B77282D3E6800D11CC7 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B76282D3E6800D11CC7 /* TimeInterval+Extensions.swift */; };
+		71833B99282DA78E00D11CC7 /* RecordsListTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833B98282DA78E00D11CC7 /* RecordsListTableViewCellModel.swift */; };
+		71833BC1282E3D3E00D11CC7 /* UIViewController+Extensions).swift in Sources */ = {isa = PBXBuildFile; fileRef = 71833BC0282E3D3D00D11CC7 /* UIViewController+Extensions).swift */; };
+		71833BC9282E9B6500D11CC7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 71833BC8282E9B6500D11CC7 /* README.md */; };
+		71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */; };
+		71BAF4FF282BAB280022C8A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71BAF501282BAB280022C8A2 /* Localizable.strings */; };
+		71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */; };
+		71BAF506282BAEC40022C8A2 /* ResultFormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BAF505282BAEC40022C8A2 /* ResultFormTableViewCell.swift */; };
 		71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF667B282A5D1E00CDF39E /* AppDelegate.swift */; };
 		71BF6685282A5D2100CDF39E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BF6684282A5D2100CDF39E /* Assets.xcassets */; };
 		71BF6688282A5D2100CDF39E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BF6686282A5D2100CDF39E /* LaunchScreen.storyboard */; };
@@ -15,9 +30,39 @@
 		71BF6699282A5ED400CDF39E /* RecordsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF6698282A5ED400CDF39E /* RecordsListCoordinator.swift */; };
 		71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */; };
 		71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */; };
+		71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF669F282A62E000CDF39E /* InjectionKey.swift */; };
+		71BF66A2282A642300CDF39E /* ResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A1282A642300CDF39E /* ResultService.swift */; };
+		71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A3282A64BF00CDF39E /* InjectedValues.swift */; };
+		71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66A5282A64FB00CDF39E /* Injected.swift */; };
+		71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66AB282A6BE100CDF39E /* SportResult.swift */; };
+		71BF66B0282A70F200CDF39E /* ResultFormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66AF282A70F200CDF39E /* ResultFormCoordinator.swift */; };
+		71BF66B2282A713800CDF39E /* ResultFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B1282A713800CDF39E /* ResultFormViewController.swift */; };
+		71BF66B4282A714200CDF39E /* ResultFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */; };
+		71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */; };
+		71BF66B9282A739400CDF39E /* RecordsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */; };
+		71BF66BB282A84DB00CDF39E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71BF66BA282A84DB00CDF39E /* GoogleService-Info.plist */; };
+		71BF66BE282A8BAA00CDF39E /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66BD282A8BAA00CDF39E /* UserDefaults+Extensions.swift */; };
+		71BF66C1282A94BC00CDF39E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 71BF66C0282A94BC00CDF39E /* FirebaseFirestore */; };
+		71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43F32C48F9C2BFA4CD366830 /* Pods-GreenCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		71833B66282BBEC900D11CC7 /* FirebaseResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseResultService.swift; sourceTree = "<group>"; };
+		71833B68282BC1F000D11CC7 /* LocalResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalResultService.swift; sourceTree = "<group>"; };
+		71833B6A282BCF1000D11CC7 /* SportResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResultType.swift; sourceTree = "<group>"; };
+		71833B6C282BD1A300D11CC7 /* RecordListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListType.swift; sourceTree = "<group>"; };
+		71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
+		71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormTableViewCellModel.swift; sourceTree = "<group>"; };
+		71833B76282D3E6800D11CC7 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		71833B98282DA78E00D11CC7 /* RecordsListTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewCellModel.swift; sourceTree = "<group>"; };
+		71833BC0282E3D3D00D11CC7 /* UIViewController+Extensions).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions).swift"; sourceTree = "<group>"; };
+		71833BC8282E9B6500D11CC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		71BAF500282BAB280022C8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormDataSource.swift; sourceTree = "<group>"; };
+		71BAF505282BAEC40022C8A2 /* ResultFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormTableViewCell.swift; sourceTree = "<group>"; };
 		71BF6678282A5D1E00CDF39E /* GreenCodeAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenCodeAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BF667B282A5D1E00CDF39E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71BF6684282A5D2100CDF39E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +73,20 @@
 		71BF6698282A5ED400CDF39E /* RecordsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListCoordinator.swift; sourceTree = "<group>"; };
 		71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListViewController.swift; sourceTree = "<group>"; };
 		71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListViewModel.swift; sourceTree = "<group>"; };
+		71BF669F282A62E000CDF39E /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		71BF66A1282A642300CDF39E /* ResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultService.swift; sourceTree = "<group>"; };
+		71BF66A3282A64BF00CDF39E /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
+		71BF66A5282A64FB00CDF39E /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		71BF66AB282A6BE100CDF39E /* SportResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResult.swift; sourceTree = "<group>"; };
+		71BF66AF282A70F200CDF39E /* ResultFormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormCoordinator.swift; sourceTree = "<group>"; };
+		71BF66B1282A713800CDF39E /* ResultFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormViewController.swift; sourceTree = "<group>"; };
+		71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormViewModel.swift; sourceTree = "<group>"; };
+		71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewDataSource.swift; sourceTree = "<group>"; };
+		71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewCell.swift; sourceTree = "<group>"; };
+		71BF66BA282A84DB00CDF39E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		71BF66BD282A8BAA00CDF39E /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		C3D9009C4C5B3E3BC90027C3 /* Pods-GreenCodeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenCodeAssignment.debug.xcconfig"; path = "Target Support Files/Pods-GreenCodeAssignment/Pods-GreenCodeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +94,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DC807475F60BAC15777D0D /* Pods_GreenCodeAssignment.framework in Frameworks */,
+				71BF66C1282A94BC00CDF39E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71BAF504282BAEAD0022C8A2 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				71BAF505282BAEC40022C8A2 /* ResultFormTableViewCell.swift */,
+				71833B70282C761C00D11CC7 /* ResultFormTableViewCellModel.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		71BF666F282A5D1E00CDF39E = {
 			isa = PBXGroup;
 			children = (
+				71833BC8282E9B6500D11CC7 /* README.md */,
 				71BF667A282A5D1E00CDF39E /* GreenCodeAssignment */,
 				71BF6679282A5D1E00CDF39E /* Products */,
+				B0A6619DFC52689EE1D1B212 /* Pods */,
+				7C48B64D269B1B79AC93CF48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,10 +135,16 @@
 			children = (
 				71BF667B282A5D1E00CDF39E /* AppDelegate.swift */,
 				71BF668F282A5DC200CDF39E /* AppCoordinator.swift */,
+				71BF66A3282A64BF00CDF39E /* InjectedValues.swift */,
+				71BF66AA282A6B9E00CDF39E /* Models */,
 				71BF6694282A5E7800CDF39E /* Scenes */,
+				71BF66A9282A675000CDF39E /* Services */,
+				71BF66C4282A9A7900CDF39E /* Extensions */,
 				71BF6691282A5E3F00CDF39E /* Architecture */,
 				71BF6684282A5D2100CDF39E /* Assets.xcassets */,
+				71BAF501282BAB280022C8A2 /* Localizable.strings */,
 				71BF6686282A5D2100CDF39E /* LaunchScreen.storyboard */,
+				71BF66BA282A84DB00CDF39E /* GoogleService-Info.plist */,
 				71BF6689282A5D2100CDF39E /* Info.plist */,
 			);
 			path = GreenCodeAssignment;
@@ -74,6 +153,8 @@
 		71BF6691282A5E3F00CDF39E /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				71BF669F282A62E000CDF39E /* InjectionKey.swift */,
+				71BF66A5282A64FB00CDF39E /* Injected.swift */,
 				71BF6692282A5E5600CDF39E /* Coordinator.swift */,
 			);
 			path = Architecture;
@@ -82,6 +163,7 @@
 		71BF6694282A5E7800CDF39E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				71BF66AE282A70D100CDF39E /* ResultForm */,
 				71BF6697282A5EAD00CDF39E /* RecordsList */,
 			);
 			path = Scenes;
@@ -93,8 +175,81 @@
 				71BF6698282A5ED400CDF39E /* RecordsListCoordinator.swift */,
 				71BF669A282A5F5400CDF39E /* RecordsListViewController.swift */,
 				71BF669C282A5F7E00CDF39E /* RecordsListViewModel.swift */,
+				71BF66B5282A731500CDF39E /* RecordsListTableViewDataSource.swift */,
+				71BF66B7282A738000CDF39E /* cells */,
 			);
 			path = RecordsList;
+			sourceTree = "<group>";
+		};
+		71BF66A9282A675000CDF39E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66A1282A642300CDF39E /* ResultService.swift */,
+				71833B66282BBEC900D11CC7 /* FirebaseResultService.swift */,
+				71833B68282BC1F000D11CC7 /* LocalResultService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		71BF66AA282A6B9E00CDF39E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66AB282A6BE100CDF39E /* SportResult.swift */,
+				71833B6A282BCF1000D11CC7 /* SportResultType.swift */,
+				71833B6C282BD1A300D11CC7 /* RecordListType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		71BF66AE282A70D100CDF39E /* ResultForm */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66AF282A70F200CDF39E /* ResultFormCoordinator.swift */,
+				71BF66B1282A713800CDF39E /* ResultFormViewController.swift */,
+				71BF66B3282A714200CDF39E /* ResultFormViewModel.swift */,
+				71BAF502282BAE660022C8A2 /* ResultFormDataSource.swift */,
+				71BAF504282BAEAD0022C8A2 /* cells */,
+			);
+			path = ResultForm;
+			sourceTree = "<group>";
+		};
+		71BF66B7282A738000CDF39E /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66B8282A739400CDF39E /* RecordsListTableViewCell.swift */,
+				71833B98282DA78E00D11CC7 /* RecordsListTableViewCellModel.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		71BF66C4282A9A7900CDF39E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				71BF66BD282A8BAA00CDF39E /* UserDefaults+Extensions.swift */,
+				71833BC0282E3D3D00D11CC7 /* UIViewController+Extensions).swift */,
+				71BAF4FD282BAAFF0022C8A2 /* String+Extensions.swift */,
+				71833B76282D3E6800D11CC7 /* TimeInterval+Extensions.swift */,
+				71BF66C2282A982C00CDF39E /* Encodable+Extensions.swift */,
+				71833B6E282BD58300D11CC7 /* UISegmentedControl+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7C48B64D269B1B79AC93CF48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC13A2637B3D31430E1BE /* Pods_GreenCodeAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0A6619DFC52689EE1D1B212 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3D9009C4C5B3E3BC90027C3 /* Pods-GreenCodeAssignment.debug.xcconfig */,
+				43F32C48F9C2BFA4CD366830 /* Pods-GreenCodeAssignment.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +259,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71BF668C282A5D2100CDF39E /* Build configuration list for PBXNativeTarget "GreenCodeAssignment" */;
 			buildPhases = (
+				B87BD7A0C5E2A96033C8EC9A /* [CP] Check Pods Manifest.lock */,
+				71BF66AD282A6F0A00CDF39E /* Swiftlint */,
 				71BF6674282A5D1E00CDF39E /* Sources */,
 				71BF6675282A5D1E00CDF39E /* Frameworks */,
 				71BF6676282A5D1E00CDF39E /* Resources */,
@@ -113,6 +270,9 @@
 			dependencies = (
 			);
 			name = GreenCodeAssignment;
+			packageProductDependencies = (
+				71BF66C0282A94BC00CDF39E /* FirebaseFirestore */,
+			);
 			productName = GreenCodeAssignment;
 			productReference = 71BF6678282A5D1E00CDF39E /* GreenCodeAssignment.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +301,9 @@
 				Base,
 			);
 			mainGroup = 71BF666F282A5D1E00CDF39E;
+			packageReferences = (
+				71BF66BF282A94BC00CDF39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 71BF6679282A5D1E00CDF39E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,12 +318,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71833BC9282E9B6500D11CC7 /* README.md in Resources */,
 				71BF6688282A5D2100CDF39E /* LaunchScreen.storyboard in Resources */,
+				71BAF4FF282BAB280022C8A2 /* Localizable.strings in Resources */,
 				71BF6685282A5D2100CDF39E /* Assets.xcassets in Resources */,
+				71BF66BB282A84DB00CDF39E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71BF66AD282A6F0A00CDF39E /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		B87BD7A0C5E2A96033C8EC9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreenCodeAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71BF6674282A5D1E00CDF39E /* Sources */ = {
@@ -168,17 +377,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				71BF6693282A5E5600CDF39E /* Coordinator.swift in Sources */,
+				71833B6B282BCF1000D11CC7 /* SportResultType.swift in Sources */,
+				71BF66B4282A714200CDF39E /* ResultFormViewModel.swift in Sources */,
+				71833B77282D3E6800D11CC7 /* TimeInterval+Extensions.swift in Sources */,
 				71BF6690282A5DC200CDF39E /* AppCoordinator.swift in Sources */,
+				71BAF503282BAE660022C8A2 /* ResultFormDataSource.swift in Sources */,
+				71BAF506282BAEC40022C8A2 /* ResultFormTableViewCell.swift in Sources */,
 				71BF669B282A5F5400CDF39E /* RecordsListViewController.swift in Sources */,
+				71833B99282DA78E00D11CC7 /* RecordsListTableViewCellModel.swift in Sources */,
+				71833B69282BC1F000D11CC7 /* LocalResultService.swift in Sources */,
+				71BF66BE282A8BAA00CDF39E /* UserDefaults+Extensions.swift in Sources */,
+				71833B67282BBEC900D11CC7 /* FirebaseResultService.swift in Sources */,
+				71BF66A4282A64BF00CDF39E /* InjectedValues.swift in Sources */,
 				71BF669D282A5F7E00CDF39E /* RecordsListViewModel.swift in Sources */,
+				71BF66B9282A739400CDF39E /* RecordsListTableViewCell.swift in Sources */,
+				71833B71282C761C00D11CC7 /* ResultFormTableViewCellModel.swift in Sources */,
+				71BF66B0282A70F200CDF39E /* ResultFormCoordinator.swift in Sources */,
+				71BF66A6282A64FB00CDF39E /* Injected.swift in Sources */,
+				71BF66B2282A713800CDF39E /* ResultFormViewController.swift in Sources */,
+				71BF66A0282A62E000CDF39E /* InjectionKey.swift in Sources */,
+				71BF66B6282A731500CDF39E /* RecordsListTableViewDataSource.swift in Sources */,
+				71BAF4FE282BAAFF0022C8A2 /* String+Extensions.swift in Sources */,
+				71BF66C3282A982C00CDF39E /* Encodable+Extensions.swift in Sources */,
+				71833B6F282BD58300D11CC7 /* UISegmentedControl+Extensions.swift in Sources */,
 				71BF667C282A5D1E00CDF39E /* AppDelegate.swift in Sources */,
+				71BF66A2282A642300CDF39E /* ResultService.swift in Sources */,
 				71BF6699282A5ED400CDF39E /* RecordsListCoordinator.swift in Sources */,
+				71BF66AC282A6BE100CDF39E /* SportResult.swift in Sources */,
+				71833B6D282BD1A300D11CC7 /* RecordListType.swift in Sources */,
+				71833BC1282E3D3E00D11CC7 /* UIViewController+Extensions).swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		71BAF501282BAB280022C8A2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71BAF500282BAB280022C8A2 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		71BF6686282A5D2100CDF39E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -306,6 +547,7 @@
 		};
 		71BF668D282A5D2100CDF39E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D9009C4C5B3E3BC90027C3 /* Pods-GreenCodeAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,7 +566,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.michalsimik.GreenCodeAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michalsimik.greencodeassignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -334,6 +576,7 @@
 		};
 		71BF668E282A5D2100CDF39E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43F32C48F9C2BFA4CD366830 /* Pods-GreenCodeAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -352,7 +595,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.michalsimik.GreenCodeAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michalsimik.greencodeassignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -382,6 +625,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71BF66BF282A94BC00CDF39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71BF66C0282A94BC00CDF39E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71BF66BF282A94BC00CDF39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71BF6670282A5D1E00CDF39E /* Project object */;
 }

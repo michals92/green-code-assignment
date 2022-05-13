@@ -1,0 +1,9 @@
+# format options
+--allman false
+--commas inline
+
+# file options
+--exclude Pods
+
+# rules
+--disable blankLinesAroundMark,trailingCommas,spaceAroundOperators

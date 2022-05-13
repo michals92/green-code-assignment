@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  GreenCodeAssignment
+
+  Created by Michal Šimík on 11.05.2022.
+  
+*/
+
+// RecordsList
+"RecordsList.title" = "Records";
+
+// ResultForm
+"ResultForm.title" = "Add result";
+"ResultForm.applyButton" = "";
+
+// RecordListType
+"RecordListType.all" = "All";
+"RecordListType.remote" = "Remote";
+"RecordListType.local" = "Local";
+
+// alerts
+"alert.repeat" = "Try again";
+"alert.cancel" = "Cancel";
+"alert.ok" = "OK";
+"error.title" = "Error occured";
+"error.mandatoryFields" = "Please, fill all fields.";
+
+// ResultError
+"ResultError.snapshot" = "Check your internet connection";
+"ResultError.parsing" = "Bad JSON structure";
+
+// ResultFormTableViewCell
+"ResultFormTableViewCell.hourLabel" = "h";
+"ResultFormTableViewCell.minuteLabel" = "m";
+"ResultFormTableViewCell.secondLabel" = "s";
+"ResultFormTableViewCell.textFieldPlaceholder" = "Enter ";
+
+// RecordsListTableViewDataSource
+"RecordsListTableViewDataSource.title" = "You have no recordings here";
+"RecordsListTableViewDataSource.buttonTitle" = "Add record";
+
+"RecordsListTableViewCell.placeTitle" = "Place";
+"RecordsListTableViewCell.durationTitle" = "Duration";
+
