@@ -23,8 +23,6 @@ class ResultFormTableViewCell: UITableViewCell {
     private var minutes = 0
     private var seconds = 0
 
-    private var allSportResults = SportResultType.allCases
-
     override func prepareForReuse() {
         super.prepareForReuse()
         nameLabel.text = nil
@@ -73,7 +71,7 @@ class ResultFormTableViewCell: UITableViewCell {
         case .type:
             let segmentedControl = UISegmentedControl()
 
-            for (index, item) in allSportResults.enumerated() {
+            for (index, item) in SportResultType.allCases.enumerated() {
                 segmentedControl.insertSegment(withTitle: item.rawValue.capitalized, at: index, animated: false)
             }
 
@@ -136,7 +134,7 @@ class ResultFormTableViewCell: UITableViewCell {
 
     @objc func recordTypeDidChange() {
         if let segmentedControl = segmentedControl {
-            textFieldHandler?(allSportResults[segmentedControl.selectedSegmentIndex].rawValue)
+            textFieldHandler?(SportResultType.allCases[segmentedControl.selectedSegmentIndex].rawValue)
         }
     }
 }

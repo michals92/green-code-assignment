@@ -33,6 +33,7 @@ class ResultFormViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         viewModel?.viewDidLoad()
     }
 

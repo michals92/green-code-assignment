@@ -27,9 +27,13 @@ final class ResultFormTableViewCellModel {
         self.formItem = formItem
 
         if case .duration = formItem.type {
-            self.durationFieldHandler = { value in self.setLatestValue(value) }
+            self.durationFieldHandler = { [weak self] value in
+                self?.setLatestValue(value)
+            }
         } else {
-            self.textFieldHandler = { value in self.setLatestValue(value) }
+            self.textFieldHandler = { [weak self] value in
+                self?.setLatestValue(value)
+            }
         }
     }
 
