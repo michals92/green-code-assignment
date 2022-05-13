@@ -37,7 +37,7 @@
 
 // RecordsListTableViewDataSource
 "RecordsListTableViewDataSource.title" = "You have no recordings here";
-"RecordsListTableViewDataSource.buttonTitle" = "Add record";
+"RecordsListTableViewDataSource.buttonTitle" = "Add result";
 
 "RecordsListTableViewCell.placeTitle" = "Place";
 "RecordsListTableViewCell.durationTitle" = "Duration";
