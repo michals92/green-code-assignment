@@ -12,7 +12,7 @@ class RecordsListViewController: UIViewController {
     private let segmentedControl = UISegmentedControl()
 
     var viewModel: RecordsListViewModelInput?
-    let dataSource = RecordListTableViewDataSource()
+    var dataSource: RecordsListTableViewDataSource?
 
     override func loadView() {
         super.loadView()
@@ -21,8 +21,18 @@ class RecordsListViewController: UIViewController {
         title = "RecordsList.title".localized
 
         tableView.register(RecordsListTableViewCell.self, forCellReuseIdentifier: String(describing: RecordsListTableViewCell.self))
+        tableView.register(EmptyTableViewCell.self, forCellReuseIdentifier: String(describing: EmptyTableViewCell.self))
+
+        let emptyTableViewCellModel = EmptyTableViewCellModel(
+            title: "RecordsListTableViewDataSource.title".localized,
+            buttonTitle: "RecordsListTableViewDataSource.buttonTitle".localized) { [weak self] in
+                self?.viewModel?.showResultForm()
+            }
+
+        let dataSource = RecordsListTableViewDataSource(emptyCellModel: emptyTableViewCellModel)
+        self.dataSource = dataSource
         tableView.dataSource = dataSource
-        tableView.allowsSelection = false
+        tableView.delegate = dataSource
     }
 
     override func viewDidLoad() {
@@ -83,7 +93,7 @@ class RecordsListViewController: UIViewController {
 
 extension RecordsListViewController: RecordsListViewControllerInput {
     func reloadData(cellModels: [RecordsListTableViewCellModel]) {
-        dataSource.cellModels = cellModels
+        dataSource?.cellModels = cellModels
         tableView.reloadData()
     }
 }

@@ -34,3 +34,7 @@
 "ResultFormTableViewCell.minuteLabel" = "m";
 "ResultFormTableViewCell.secondLabel" = "s";
 "ResultFormTableViewCell.textFieldPlaceholder" = "Enter ";
+
+// RecordsListTableViewDataSource
+"RecordsListTableViewDataSource.title" = "You have no recordings here";
+"RecordsListTableViewDataSource.buttonTitle" = "Add record";
